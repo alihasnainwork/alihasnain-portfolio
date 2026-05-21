@@ -945,25 +945,59 @@
         </div>
       </div>
       <div>
-        <div class="contact-form">
+        <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="John Smith">
+            <input type="text" name="name" class="form-input" placeholder="John Smith" required>
           </div>
           <div class="form-group">
             <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="john@company.com">
+            <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
           </div>
           <div class="form-group">
             <label class="form-label">Service Needed</label>
-            <input type="text" class="form-input" placeholder="e.g. Skip Tracing, Data Entry, Lead Generation...">
+            <input type="text" name="service" class="form-input" placeholder="e.g. Skip Tracing, Data Entry, Lead Generation...">
           </div>
           <div class="form-group">
             <label class="form-label">Project Details</label>
-            <textarea class="form-textarea" placeholder="Tell me about your project — scope, timeline, and any specific requirements..."></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Tell me about your project — scope, timeline, and any specific requirements..." required></textarea>
           </div>
-          <button class="form-btn" onclick="alert('Message sent! Ali will respond within 1 hour.')">Send Message →</button>
-        </div>
+          <button type="submit" class="form-btn" id="submitBtn">Send Message →</button>
+          <div id="formSuccess" style="display:none; margin-top:1rem; color:#00c77a; font-weight:600; font-size:.9rem;">✅ Message sent! Ali will respond within 1 hour.</div>
+          <div id="formError" style="display:none; margin-top:1rem; color:#ff5555; font-weight:600; font-size:.9rem;">❌ Something went wrong. Please try again or email directly.</div>
+        </form>
+
+        <script>
+          document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const success = document.getElementById('formSuccess');
+            const error = document.getElementById('formError');
+            btn.textContent = 'Sending...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+            success.style.display = 'none';
+            error.style.display = 'none';
+            try {
+              const response = await fetch('https://formspree.io/f/xeedabad', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
+              });
+              if (response.ok) {
+                success.style.display = 'block';
+                this.reset();
+              } else {
+                error.style.display = 'block';
+              }
+            } catch(err) {
+              error.style.display = 'block';
+            }
+            btn.textContent = 'Send Message →';
+            btn.style.opacity = '1';
+            btn.disabled = false;
+          });
+        </script>
       </div>
     </div>
   </div>
