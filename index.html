@@ -3,734 +3,582 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="p:domain_verify" content="dfcb0e4c88b909082d311c1aa95ef396"/>
-<title>Ali Hasnain — Data Entry & Skip Tracing Expert</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Ali Hasnain — Skip Tracing, Data & Lead Generation Specialist</title>
 <style>
-  :root {
-    --ink: #0a0a0a;
-    --paper: #f5f2eb;
-    --accent: #00c77a;
-    --accent2: #1a6fff;
-    --muted: #7a7a72;
-    --card: #ffffff;
-    --border: #e0ddd4;
-    --tag-bg: #eef9f4;
-    --tag-color: #007a4a;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --ink:#080c16;
+  --ink-2:#0e1526;
+  --ink-3:#141d33;
+  --ink-4:#1b2643;
+  --line:rgba(201,162,75,0.16);
+  --paper:#f2e9d8;
+  --brass:#c9a24b;
+  --brass-light:#e8c877;
+  --brass-dim:#7a622f;
+  --verify:#46d18a;
+  --slate:#94a1ba;
+  --slate-dim:#5c688a;
+  --white:#f5f2ea;
+  --font-display:'Fraunces', serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+}
 
-  html { scroll-behavior: smooth; }
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--ink);
+  color:var(--white);
+  font-family:var(--font-body);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--brass); color:var(--ink);}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+img{max-width:100%; display:block;}
+button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
 
-  /* ── NOISE TEXTURE ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 999;
-    opacity: .4;
-  }
+.wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
+@media(max-width:640px){.wrap{padding:0 20px;}}
 
-  /* ── HEADER / NAV ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 3rem;
-    background: rgba(245,242,235,.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: .08em;
-    color: var(--ink);
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-size: .85rem;
-    font-weight: 500;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--muted);
-    transition: color .2s;
-  }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-cta {
-    background: var(--ink);
-    color: var(--paper) !important;
-    padding: .5rem 1.2rem;
-    border-radius: 3px;
-    transition: background .2s !important;
-  }
-  .nav-cta:hover { background: var(--accent) !important; color: var(--ink) !important; }
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--brass);
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:18px;
+}
+.eyebrow::before{content:''; width:22px; height:1px; background:var(--brass);}
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 8rem 3rem 4rem;
-    gap: 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    right: -10%;
-    top: 10%;
-    width: 55%;
-    height: 80%;
-    background: radial-gradient(ellipse at center, rgba(0,199,122,.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:600; letter-spacing:-0.01em;}
+.section-title{
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.12;
+  margin-bottom:16px;
+  color:var(--white);
+}
+.section-title em{font-style:italic; color:var(--brass-light);}
+.section-sub{color:var(--slate); max-width:560px; font-size:16px;}
+.section-head{margin-bottom:56px;}
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    background: var(--tag-bg);
-    border: 1px solid rgba(0,199,122,.3);
-    color: var(--tag-color);
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    padding: .35rem .9rem;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-  }
-  .hero-badge::before { content: '●'; font-size: .5rem; animation: pulse 1.5s ease-in-out infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+/* ---------- background texture ---------- */
+.bg-grid{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
+  opacity:0.5;
+}
+.bg-glow{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(600px 400px at 15% 10%, rgba(201,162,75,0.10), transparent 60%),
+    radial-gradient(700px 500px at 90% 30%, rgba(70,209,138,0.06), transparent 60%);
+}
 
-  .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.5rem, 7vw, 6.5rem);
-    line-height: .95;
-    letter-spacing: .02em;
-    margin-bottom: 1.5rem;
-  }
-  .hero-title .line2 { color: var(--accent); }
+/* ---------- nav ---------- */
+header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  backdrop-filter:blur(14px);
+  background:rgba(8,12,22,0.72);
+  border-bottom:1px solid var(--line);
+}
+nav{display:flex; align-items:center; justify-content:space-between; height:78px;}
+.brand{display:flex; align-items:center; gap:12px; font-family:var(--font-display); font-size:19px; font-weight:600;}
+.seal{
+  width:38px; height:38px; border-radius:50%;
+  border:1.5px solid var(--brass);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:13px; color:var(--brass-light);
+  position:relative;
+}
+.seal::after{
+  content:''; position:absolute; inset:-5px; border-radius:50%;
+  border:1px solid rgba(201,162,75,0.3);
+}
+.nav-links{display:flex; gap:36px; font-size:14px; color:var(--slate);}
+.nav-links a{position:relative; transition:color .25s;}
+.nav-links a:hover{color:var(--white);}
+.nav-links a::after{
+  content:''; position:absolute; left:0; right:0; bottom:-6px; height:1px;
+  background:var(--brass); transform:scaleX(0); transition:transform .25s;
+}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{
+  font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.05em;
+  padding:11px 22px; border:1px solid var(--brass); border-radius:2px;
+  color:var(--brass-light); transition:all .25s;
+}
+.nav-cta:hover{background:var(--brass); color:var(--ink);}
+.nav-toggle{display:none;}
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .nav-toggle{display:block; font-size:22px; color:var(--brass);}
+}
 
-  .hero-sub {
-    font-size: 1.1rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-  }
+/* ---------- hero ---------- */
+.hero{
+  position:relative; z-index:1;
+  min-height:100vh;
+  display:flex; align-items:center;
+  padding-top:110px; padding-bottom:60px;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center; width:100%;
+}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;} }
 
-  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--ink);
-    color: var(--paper);
-    padding: .85rem 2rem;
-    border-radius: 3px;
-    font-size: .9rem;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: .04em;
-    transition: all .25s;
-    border: 2px solid var(--ink);
-  }
-  .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
-  .btn-secondary {
-    color: var(--ink);
-    padding: .85rem 2rem;
-    border-radius: 3px;
-    font-size: .9rem;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: .04em;
-    border: 2px solid var(--border);
-    transition: all .25s;
-  }
-  .btn-secondary:hover { border-color: var(--ink); }
+.hero-avatar{
+  width:72px; height:72px; border-radius:50%; overflow:hidden;
+  border:2px solid var(--brass); margin-bottom:22px;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+  font-family:var(--font-mono); font-size:20px; color:var(--brass-light);
+}
+.hero-avatar img{width:100%; height:100%; object-fit:cover; display:none;}
+.hero-avatar img.loaded{display:block;}
 
-  .hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2.5rem;
-    max-width: 380px;
-    width: 100%;
-    box-shadow: 0 20px 60px rgba(0,0,0,.08);
-    position: relative;
-    animation: floatCard 4s ease-in-out infinite;
-  }
-  @keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.flip-front .fimg{
+  width:100%; height:110px; border-radius:6px; overflow:hidden; margin-bottom:16px;
+  background:rgba(201,162,75,0.06); border:1px solid var(--line);
+}
+.flip-front .fimg img{width:100%; height:100%; object-fit:cover; display:none;}
+.flip-front .fimg img.loaded{display:block;}
 
-  .profile-pic {
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 1rem;
-  }
-  .hcard-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .04em; }
-  .hcard-title { font-size: .85rem; color: var(--muted); margin-bottom: 1.2rem; }
+.hero-tag{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:12px; color:var(--verify);
+  border:1px solid rgba(70,209,138,0.3); background:rgba(70,209,138,0.06);
+  padding:7px 14px; border-radius:20px; margin-bottom:26px;
+}
+.hero-tag .dot{width:6px; height:6px; border-radius:50%; background:var(--verify); box-shadow:0 0 8px var(--verify);}
 
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .8rem;
-    margin-bottom: 1.5rem;
-  }
-  .stat-box {
-    background: var(--paper);
-    border-radius: 8px;
-    padding: .8rem .6rem;
-    text-align: center;
-  }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--accent); }
-  .stat-lbl { font-size: .65rem; color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
+.hero h1{
+  font-size:clamp(38px,5.4vw,66px);
+  line-height:1.04;
+  color:var(--white);
+  margin-bottom:24px;
+}
+.hero h1 .line2{display:block; color:var(--brass-light); font-style:italic;}
+.hero p.lede{font-size:17.5px; color:var(--slate); max-width:520px; margin-bottom:36px;}
 
-  .platform-badges { display: flex; gap: .5rem; flex-wrap: wrap; }
-  .pbadge {
-    font-size: .7rem;
-    font-weight: 600;
-    padding: .3rem .8rem;
-    border-radius: 20px;
-    letter-spacing: .04em;
-  }
-  .pbadge.fiverr { background: #1dbf73; color: white; }
-  .pbadge.upwork { background: #14a800; color: white; }
-  .pbadge.linkedin { background: #0077b5; color: white; }
+.hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:52px;}
+.btn{
+  font-family:var(--font-mono); font-size:13px; letter-spacing:0.04em;
+  padding:15px 28px; border-radius:2px; display:inline-flex; align-items:center; gap:10px;
+  transition:all .25s;
+}
+.btn-primary{background:var(--brass); color:var(--ink); font-weight:600;}
+.btn-primary:hover{background:var(--brass-light); transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--slate-dim); color:var(--white);}
+.btn-ghost:hover{border-color:var(--brass); color:var(--brass-light);}
 
-  .floating-tag {
-    position: absolute;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: .6rem 1rem;
-    font-size: .78rem;
-    font-weight: 600;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    white-space: nowrap;
-  }
-  .ft1 { top: -1.5rem; right: -2rem; color: var(--accent); }
-  .ft2 { bottom: -1rem; left: -2rem; color: var(--accent2); }
+.hero-stats{display:flex; gap:0; border-top:1px solid var(--line); padding-top:28px; max-width:520px;}
+.hstat{flex:1; padding-right:20px;}
+.hstat .num{font-family:var(--font-mono); font-size:24px; color:var(--brass-light); font-weight:600;}
+.hstat .lbl{font-size:12px; color:var(--slate-dim); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px;}
 
-  /* ── SECTIONS ── */
-  section { padding: 6rem 3rem; }
-  .container { max-width: 1100px; margin: 0 auto; }
+/* ---------- 3D record stack (signature element) ---------- */
+.stage{
+  perspective:1400px;
+  height:520px;
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+}
+.deck{
+  position:relative; width:340px; height:400px;
+  transform-style:preserve-3d;
+  transition:transform .2s ease-out;
+}
+.rcard{
+  position:absolute; inset:0;
+  border-radius:10px;
+  background:linear-gradient(155deg, var(--ink-3), var(--ink-2));
+  border:1px solid var(--line);
+  box-shadow:0 30px 60px rgba(0,0,0,0.55);
+  transform-style:preserve-3d;
+  padding:26px;
+  display:flex; flex-direction:column;
+}
+.rcard.back1{transform:translateZ(-40px) translateY(18px) rotate(-4deg); opacity:0.55;}
+.rcard.back2{transform:translateZ(-80px) translateY(34px) rotate(5deg); opacity:0.35;}
+.rcard.front{transform:translateZ(0);}
 
-  .section-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: .75rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: .8rem;
-  }
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    letter-spacing: .04em;
-    margin-bottom: 1rem;
-    line-height: 1.05;
-  }
-  .section-sub {
-    font-size: 1rem;
-    color: var(--muted);
-    max-width: 560px;
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 3.5rem;
-  }
+.rcard .rc-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;}
+.rcard .rc-label{font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.12em; color:var(--slate-dim); text-transform:uppercase;}
+.rcard .rc-status{font-family:var(--font-mono); font-size:10.5px; padding:4px 9px; border-radius:20px; border:1px solid var(--brass-dim); color:var(--brass-light);}
+.rcard .rc-status.found{border-color:var(--verify); color:var(--verify);}
 
-  /* ── SERVICES ── */
-  #services { background: var(--ink); color: var(--paper); }
-  #services .section-eyebrow { color: var(--accent); }
-  #services .section-sub { color: #999; }
+.rc-field{margin-bottom:16px;}
+.rc-field .k{font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--slate-dim); margin-bottom:5px;}
+.rc-field .v{font-size:15px; color:var(--white); display:flex; align-items:center; gap:8px; min-height:20px;}
+.rc-field .v .check{color:var(--verify); opacity:0; transform:scale(0.5); transition:all .35s;}
+.rc-field .v.revealed .check{opacity:1; transform:scale(1);}
+.rc-field .skel{height:14px; width:70%; background:linear-gradient(90deg, var(--ink-4) 25%, rgba(255,255,255,0.08) 50%, var(--ink-4) 75%); background-size:200% 100%; border-radius:3px; animation:shimmer 1.4s infinite;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .service-card {
-    background: #161616;
-    border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color .3s, transform .3s;
-    cursor: default;
-  }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .3s;
-  }
-  .service-card:hover { border-color: #3a3a3a; transform: translateY(-4px); }
-  .service-card:hover::before { transform: scaleX(1); }
+.rc-scan{position:absolute; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--brass-light), transparent); opacity:0; top:0;}
+.rc-scan.active{animation:scan 1.8s ease-in-out;}
+@keyframes scan{0%{opacity:0; top:20px;}15%{opacity:1;}85%{opacity:1;}100%{opacity:0; top:340px;}}
 
-  .svc-icon {
-    width: 48px; height: 48px;
-    background: rgba(0,199,122,.1);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-  }
-  .svc-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .05em; margin-bottom: .5rem; }
-  .svc-desc { font-size: .88rem; color: #888; line-height: 1.65; font-weight: 300; margin-bottom: 1.2rem; }
-  .svc-price { font-family: 'DM Mono', monospace; font-size: .8rem; color: var(--accent); }
+.rc-foot{margin-top:auto; padding-top:16px; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:10.5px; color:var(--slate-dim); display:flex; justify-content:space-between;}
 
-  /* ── STATS STRIP ── */
-  .stats-strip {
-    background: var(--accent);
-    padding: 3rem;
-  }
-  .stats-strip-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    text-align: center;
-  }
-  .strip-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--ink); }
-  .strip-lbl { font-size: .8rem; font-weight: 600; color: rgba(0,0,0,.6); letter-spacing: .06em; text-transform: uppercase; }
+/* ---------- trust strip ---------- */
+.trust{
+  position:relative; z-index:1;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  padding:26px 0; background:rgba(255,255,255,0.015);
+}
+.trust .wrap{display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between; align-items:center;}
+.trust-item{font-family:var(--font-mono); font-size:12.5px; color:var(--slate); display:flex; align-items:center; gap:8px;}
+.trust-item b{color:var(--brass-light); font-weight:600;}
 
-  /* ── SKILLS ── */
-  #skills { background: var(--paper); }
-  .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .skill-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-  .skill-item { display: flex; flex-direction: column; gap: .4rem; }
-  .skill-header { display: flex; justify-content: space-between; font-size: .88rem; font-weight: 500; }
-  .skill-pct { font-family: 'DM Mono', monospace; color: var(--accent); font-size: .8rem; }
-  .skill-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
-  .skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 1s cubic-bezier(.16,1,.3,1);
-  }
-  .skill-fill.animate { transform: scaleX(1); }
+/* ---------- generic section ---------- */
+section{position:relative; z-index:1; padding:120px 0;}
+@media(max-width:640px){section{padding:80px 0;}}
 
-  .cert-grid { display: flex; flex-direction: column; gap: 1rem; }
-  .cert-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .cert-icon { font-size: 1.5rem; }
-  .cert-name { font-weight: 600; font-size: .9rem; }
-  .cert-issuer { font-size: .78rem; color: var(--muted); }
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
 
-  /* ── EXPERIENCE ── */
-  #experience { background: #f9f7f2; }
-  .timeline { position: relative; padding-left: 2rem; }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent), transparent);
-  }
-  .tl-item { position: relative; margin-bottom: 2.5rem; }
-  .tl-dot {
-    position: absolute;
-    left: -2.45rem; top: .3rem;
-    width: 12px; height: 12px;
-    background: var(--accent);
-    border-radius: 50%;
-    border: 2px solid var(--paper);
-  }
-  .tl-period { font-family: 'DM Mono', monospace; font-size: .72rem; color: var(--accent); letter-spacing: .06em; margin-bottom: .3rem; }
-  .tl-role { font-weight: 700; font-size: 1rem; margin-bottom: .2rem; }
-  .tl-company { font-size: .85rem; color: var(--muted); margin-bottom: .5rem; }
-  .tl-desc { font-size: .88rem; color: #555; line-height: 1.65; font-weight: 300; }
+/* ---------- services ---------- */
+.services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.services-grid{grid-template-columns:1fr;}}
 
-  /* ── PORTFOLIO ── */
-  #portfolio { background: var(--ink); color: var(--paper); }
-  #portfolio .section-eyebrow { color: var(--accent); }
-  #portfolio .section-sub { color: #999; }
+.scard{
+  position:relative;
+  background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:32px 26px;
+  transform-style:preserve-3d;
+  transition:transform .12s ease-out, border-color .3s;
+  will-change:transform;
+}
+.scard:hover{border-color:rgba(201,162,75,0.45);}
+.scard .icon{
+  width:46px; height:46px; border-radius:8px;
+  background:rgba(201,162,75,0.08); border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+  color:var(--brass-light);
+  transform:translateZ(30px);
+}
+.scard h3{font-size:19px; margin-bottom:10px; color:var(--white); transform:translateZ(20px);}
+.scard p{font-size:14.5px; color:var(--slate); margin-bottom:20px; transform:translateZ(20px);}
+.scard .price{
+  font-family:var(--font-mono); font-size:12.5px; color:var(--brass-light);
+  border-top:1px solid var(--line); padding-top:16px; transform:translateZ(20px);
+  display:flex; justify-content:space-between; align-items:center;
+}
 
-  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-  .port-card {
-    border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform .3s, border-color .3s;
-  }
-  .port-card:hover { transform: translateY(-6px); border-color: var(--accent); }
-  .port-thumb {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-  }
-  .port-thumb.t1 { background: linear-gradient(135deg, #0d2a1f, #00c77a22); }
-  .port-thumb.t2 { background: linear-gradient(135deg, #0d1a2e, #1a6fff22); }
-  .port-thumb.t3 { background: linear-gradient(135deg, #2a1a0d, #ff9500 22%); }
-  .port-body { padding: 1.5rem; background: #161616; }
-  .port-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .8rem; }
-  .port-tag { background: rgba(0,199,122,.1); color: var(--accent); font-size: .7rem; font-weight: 600; padding: .2rem .6rem; border-radius: 3px; letter-spacing: .04em; }
-  .port-title { font-weight: 700; margin-bottom: .4rem; }
-  .port-desc { font-size: .83rem; color: #888; line-height: 1.55; font-weight: 300; }
-  .port-meta { display: flex; gap: 2rem; margin-top: 1rem; }
-  .port-meta-item { font-family: 'DM Mono', monospace; font-size: .72rem; color: var(--accent); }
+/* ---------- skills ---------- */
+.skills-wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px;}
+@media(max-width:900px){.skills-wrap{grid-template-columns:1fr; gap:40px;}}
+.skill-row{margin-bottom:22px;}
+.skill-row .sr-top{display:flex; justify-content:space-between; font-size:14px; margin-bottom:9px;}
+.skill-row .sr-top .pct{font-family:var(--font-mono); color:var(--brass-light);}
+.bar{height:5px; background:var(--ink-3); border-radius:4px; overflow:hidden;}
+.bar-fill{height:100%; width:0; background:linear-gradient(90deg, var(--brass-dim), var(--brass-light)); border-radius:4px; transition:width 1.4s cubic-bezier(.2,.8,.2,1);}
 
-  /* ── REVIEWS ── */
-  #reviews { background: var(--paper); }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .review-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: box-shadow .3s;
-  }
-  .review-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.08); }
-  .stars { color: #f59e0b; margin-bottom: .8rem; font-size: 1.1rem; }
-  .review-text { font-size: .9rem; color: #444; line-height: 1.7; font-style: italic; font-weight: 300; margin-bottom: 1.2rem; }
-  .review-author { font-size: .82rem; font-weight: 600; }
-  .review-platform { font-size: .75rem; color: var(--muted); }
+.creds{display:flex; flex-direction:column; gap:18px;}
+.cred{
+  display:flex; gap:16px; padding:18px; border:1px solid var(--line); border-radius:8px;
+  background:rgba(255,255,255,0.015);
+}
+.cred .cn{font-family:var(--font-mono); font-size:11px; color:var(--brass-dim); min-width:26px; padding-top:2px;}
+.cred h4{font-size:15px; color:var(--white); margin-bottom:3px;}
+.cred span{font-size:12.5px; color:var(--slate-dim);}
 
-  /* ── CONTACT ── */
-  #contact { background: var(--ink); color: var(--paper); }
-  #contact .section-eyebrow { color: var(--accent); }
-  #contact .section-sub { color: #999; }
-  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+/* ---------- timeline ---------- */
+.timeline{position:relative; padding-left:32px; border-left:1px solid var(--line);}
+.tl-item{position:relative; padding-bottom:44px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:''; position:absolute; left:-37px; top:4px; width:11px; height:11px; border-radius:50%;
+  background:var(--ink); border:2px solid var(--brass); 
+}
+.tl-item.current::before{background:var(--verify); border-color:var(--verify); box-shadow:0 0 10px rgba(70,209,138,0.6);}
+.tl-date{font-family:var(--font-mono); font-size:11.5px; color:var(--brass-dim); letter-spacing:0.05em; margin-bottom:6px; text-transform:uppercase;}
+.tl-item h4{font-size:18px; color:var(--white); margin-bottom:4px;}
+.tl-org{font-size:13px; color:var(--slate-dim); margin-bottom:10px;}
+.tl-item p{font-size:14.5px; color:var(--slate); max-width:640px;}
 
-  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #161616;
-    border: 1px solid #2a2a2a;
-    border-radius: 10px;
-    padding: 1.2rem 1.5rem;
-    text-decoration: none;
-    color: var(--paper);
-    transition: border-color .25s, transform .25s;
-  }
-  .contact-link:hover { border-color: var(--accent); transform: translateX(6px); }
-  .cl-icon { font-size: 1.5rem; }
-  .cl-label { font-size: .72rem; color: #666; letter-spacing: .06em; text-transform: uppercase; }
-  .cl-value { font-weight: 600; font-size: .92rem; }
+/* ---------- portfolio flip cards ---------- */
+.folio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media(max-width:900px){.folio-grid{grid-template-columns:1fr;}}
+.flip-card{perspective:1600px; height:280px;}
+.flip-inner{
+  position:relative; width:100%; height:100%; text-align:left;
+  transform-style:preserve-3d; transition:transform .7s cubic-bezier(.2,.9,.25,1);
+}
+.flip-card:hover .flip-inner, .flip-card.tapped .flip-inner{transform:rotateY(180deg);}
+.flip-face{
+  position:absolute; inset:0; backface-visibility:hidden; border-radius:10px;
+  border:1px solid var(--line); padding:28px; display:flex; flex-direction:column;
+}
+.flip-front{background:linear-gradient(160deg, var(--ink-3), var(--ink-2));}
+.flip-front .fnum{font-family:var(--font-mono); font-size:11px; color:var(--brass-dim); margin-bottom:auto;}
+.flip-front h3{font-size:19px; margin-bottom:8px;}
+.flip-front span{font-size:12.5px; color:var(--slate-dim); font-family:var(--font-mono);}
+.flip-back{background:linear-gradient(160deg, var(--brass-dim), #55461f); transform:rotateY(180deg); color:var(--white);}
+.flip-back p{font-size:14px; margin-bottom:16px; opacity:0.95;}
+.flip-back .metrics{margin-top:auto; display:flex; gap:18px; font-family:var(--font-mono); font-size:12.5px;}
 
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: .4rem; }
-  .form-label { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: #666; }
-  .form-input, .form-textarea {
-    background: #161616;
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    padding: .9rem 1.1rem;
-    color: var(--paper);
-    font-family: 'DM Sans', sans-serif;
-    font-size: .9rem;
-    outline: none;
-    transition: border-color .2s;
-    resize: none;
-  }
-  .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
-  .form-textarea { height: 130px; }
-  .form-btn {
-    background: var(--accent);
-    color: var(--ink);
-    border: none;
-    padding: .9rem 2rem;
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: .92rem;
-    letter-spacing: .04em;
-    cursor: pointer;
-    transition: opacity .2s, transform .2s;
-    align-self: flex-start;
-  }
-  .form-btn:hover { opacity: .85; transform: translateY(-2px); }
+/* ---------- testimonials ---------- */
+.test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+@media(max-width:900px){.test-grid{grid-template-columns:1fr;}}
+.tcard{
+  background:linear-gradient(160deg, var(--ink-3), var(--ink-2)); border:1px solid var(--line);
+  border-radius:10px; padding:28px; display:flex; flex-direction:column;
+}
+.stars{color:var(--brass-light); letter-spacing:2px; margin-bottom:16px; font-size:14px;}
+.tcard p.quote{font-size:14.5px; color:var(--slate); margin-bottom:20px; font-style:italic;}
+.tcard .who{margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding-top:14px;}
+.tcard .who b{font-size:13.5px; color:var(--white); display:block;}
+.tcard .who span{font-size:11.5px; color:var(--slate-dim); font-family:var(--font-mono);}
 
-  /* ── FOOTER ── */
-  footer {
-    background: #050505;
-    padding: 2.5rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #444;
-    font-size: .82rem;
-    border-top: 1px solid #1a1a1a;
-  }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: #333; }
-  .footer-logo span { color: var(--accent); }
+/* ---------- contact ---------- */
+.contact-wrap{display:grid; grid-template-columns:1fr 0.85fr; gap:50px;}
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr;}}
+.form-panel{
+  background:linear-gradient(160deg, var(--ink-3), var(--ink-2)); border:1px solid var(--line);
+  border-radius:12px; padding:38px;
+}
+.field{margin-bottom:20px;}
+.field label{display:block; font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--slate-dim); margin-bottom:8px;}
+.field input, .field select, .field textarea{
+  width:100%; background:var(--ink); border:1px solid var(--line); border-radius:6px; padding:13px 14px;
+  color:var(--white); font-family:var(--font-body); font-size:14.5px; transition:border-color .2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--brass);}
+.field textarea{resize:vertical; min-height:110px;}
+.form-note{font-size:12.5px; color:var(--slate-dim); margin-top:14px;}
+.form-success{display:none; margin-top:16px; padding:14px; border-radius:6px; border:1px solid rgba(70,209,138,0.35); background:rgba(70,209,138,0.08); color:var(--verify); font-size:13.5px;}
+.form-success.show{display:block;}
 
-  /* ── ANIMATIONS ── */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
-  }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
+.direct-panel h4{font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--slate-dim); margin-bottom:18px; font-family:var(--font-mono);}
+.direct-links{display:flex; flex-direction:column; gap:10px; margin-bottom:32px;}
+.dlink{
+  display:flex; align-items:center; justify-content:space-between; padding:15px 18px;
+  border:1px solid var(--line); border-radius:8px; font-size:14px; transition:all .2s;
+}
+.dlink:hover{border-color:var(--brass); background:rgba(201,162,75,0.05); transform:translateX(4px);}
+.dlink .arrow{color:var(--brass); font-family:var(--font-mono);}
+.response-box{
+  border:1px solid var(--line); border-radius:8px; padding:20px; background:rgba(70,209,138,0.04);
+  border-color:rgba(70,209,138,0.25);
+}
+.response-box .rt{font-family:var(--font-mono); font-size:26px; color:var(--verify); margin-bottom:4px;}
+.response-box .rl{font-size:12.5px; color:var(--slate);}
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 3rem; }
-    .hero::after { display: none; }
-    section { padding: 4rem 1.5rem; }
-    .stats-strip-inner { grid-template-columns: repeat(2,1fr); }
-    .skills-layout { grid-template-columns: 1fr; }
-    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
-  }
+/* ---------- sticky bar ---------- */
+.sticky-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:90;
+  background:rgba(8,12,22,0.94); backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  transform:translateY(100%); transition:transform .4s ease;
+  padding:14px 0;
+}
+.sticky-bar.show{transform:translateY(0);}
+.sticky-bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+.sb-msg{font-size:13.5px; color:var(--slate);}
+.sb-msg b{color:var(--white);}
+.sb-actions{display:flex; gap:10px;}
+.sb-actions a{font-family:var(--font-mono); font-size:12px; padding:10px 18px; border-radius:2px;}
+.sb-actions .sb-primary{background:var(--brass); color:var(--ink); font-weight:600;}
+.sb-actions .sb-ghost{border:1px solid var(--slate-dim); color:var(--white);}
+@media(max-width:640px){.sb-msg{display:none;}}
+
+/* footer */
+footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:40px 0 110px; text-align:center;}
+footer .brand{justify-content:center; margin-bottom:10px;}
+footer p{font-size:12.5px; color:var(--slate-dim);}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Ali<span>.</span>H</a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="https://www.fiverr.com/alikhan2240?public_mode=true" target="_blank" class="nav-cta">Hire Me</a></li>
-  </ul>
-</nav>
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<header>
+  <nav class="wrap">
+    <div class="brand"><span class="seal">AH</span> Ali Hasnain</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Start a Project →</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-badge">Available for Freelance</div>
-    <h1 class="hero-title">
-      Data Entry<br>
-      <span class="line2">&amp; Skip Tracing</span><br>
-      Expert
-    </h1>
-    <p class="hero-sub">
-      I help businesses and real estate investors eliminate manual data work. 
-      From skip tracing 1M+ property records to building B2B lead lists — 
-      delivered accurately, every time.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Hire Me Now</a>
-      <a href="#portfolio" class="btn-secondary">View My Work</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="floating-tag ft1">✅ 1M+ Records Traced</div>
-    <div class="hero-card">
-      <div class="profile-pic">AH</div>
-      <div class="hcard-name">Ali Hasnain</div>
-      <div class="hcard-title">Data Entry &amp; Skip Tracing Specialist | Lead Generation Expert</div>
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-num">1M+</div>
-          <div class="stat-lbl">Records</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">2.5K+</div>
-          <div class="stat-lbl">Pages Proofed</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">4.7★</div>
-          <div class="stat-lbl">Upwork</div>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-avatar" id="heroAvatar">AH<img id="heroAvatarImg" alt="Ali Hasnain"></div>
+      <div class="hero-tag"><span class="dot"></span> Available for new projects</div>
+      <h1>I turn messy records<span class="line2">into verified contacts.</span></h1>
+      <p class="lede">Skip tracing, lead generation, and data operations for real estate investors and businesses who need clean, accurate information — delivered fast, without the back-and-forth.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Hire Me Now</a>
+        <a href="#portfolio" class="btn btn-ghost">See My Work</a>
       </div>
-      <div class="platform-badges">
-        <span class="pbadge fiverr">Fiverr</span>
-        <span class="pbadge upwork">Upwork</span>
-        <span class="pbadge linkedin">LinkedIn</span>
+      <div class="hero-stats">
+        <div class="hstat"><div class="num">1M+</div><div class="lbl">Records Traced</div></div>
+        <div class="hstat"><div class="num">6+ yrs</div><div class="lbl">Freelancing</div></div>
+        <div class="hstat"><div class="num">4.7★</div><div class="lbl">Client Rating</div></div>
+        <div class="hstat"><div class="num">100%</div><div class="lbl">Accuracy Goal</div></div>
       </div>
     </div>
-    <div class="floating-tag ft2">📍 Pakistan · Remote Ready</div>
+
+    <div class="stage">
+      <div class="deck" id="deck">
+        <div class="rcard back2"></div>
+        <div class="rcard back1"></div>
+        <div class="rcard front" id="frontCard">
+          <div class="rc-scan" id="scanline"></div>
+          <div class="rc-top">
+            <span class="rc-label">Trace Record #0417</span>
+            <span class="rc-status" id="rcStatus">Searching</span>
+          </div>
+          <div class="rc-field"><div class="k">Owner Name</div><div class="v" id="f1"><span class="skel"></span></div></div>
+          <div class="rc-field"><div class="k">Phone Number</div><div class="v" id="f2"><span class="skel"></span></div></div>
+          <div class="rc-field"><div class="k">Email Address</div><div class="v" id="f3"><span class="skel"></span></div></div>
+          <div class="rc-field"><div class="k">Property Address</div><div class="v" id="f4"><span class="skel"></span></div></div>
+          <div class="rc-foot"><span>PROPWIRE × TPS</span><span id="rcTimer">00:00</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-strip-inner">
-    <div>
-      <div class="strip-num">1M+</div>
-      <div class="strip-lbl">Records Skip Traced</div>
-    </div>
-    <div>
-      <div class="strip-num">3+</div>
-      <div class="strip-lbl">Years Freelancing</div>
-    </div>
-    <div>
-      <div class="strip-num">4.7★</div>
-      <div class="strip-lbl">Average Rating</div>
-    </div>
-    <div>
-      <div class="strip-num">100%</div>
-      <div class="strip-lbl">Data Accuracy Goal</div>
-    </div>
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">⭐ <b>4.7 / 5</b> average across Upwork & Fiverr</div>
+    <div class="trust-item">📍 <b>Pakistan</b> · remote, US-hours availability</div>
+    <div class="trust-item">⚡ <b>&lt; 1 hour</b> average response time</div>
+    <div class="trust-item">🔁 <b>Repeat clients</b> from real estate & agencies</div>
   </div>
 </div>
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="container">
-    <div class="section-eyebrow">What I Do</div>
-    <h2 class="section-title">Services That<br>Deliver Results</h2>
-    <p class="section-sub">Professional freelance services available on Fiverr and Upwork, tailored for businesses and real estate investors who need reliable, accurate data work.</p>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What I Do</div>
+      <h2 class="section-title">Services built for <em>real estate</em> and data-heavy teams</h2>
+      <p class="section-sub">Every service below is something I run every week for active clients — not a theoretical skill.</p>
+    </div>
     <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="svc-icon">🔍</div>
-        <div class="svc-title">Skip Tracing</div>
-        <div class="svc-desc">Find verified phone numbers and email addresses for property owners and real estate investors. Using TruePeopleSearch and Propwire to cross-reference 100,000+ records with precision.</div>
-        <div class="svc-price">From PKR 4,387 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">◎</div>
+        <h3>Real Estate Skip Tracing</h3>
+        <p>Verified phone numbers and emails for property owners, cross-referenced across Propwire and TruePeopleSearch for accuracy.</p>
+        <div class="price"><span>From $15 / project</span><span>→</span></div>
       </div>
-      <div class="service-card fade-up">
-        <div class="svc-icon">📊</div>
-        <div class="svc-title">Data Entry & Excel</div>
-        <div class="svc-desc">Accurate, fast data entry into Excel and Google Sheets. Copy-paste, data cleaning, formatting, and organization — all delivered error-free and ready for immediate use.</div>
-        <div class="svc-price">From PKR 5,849 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">▤</div>
+        <h3>Data Entry & Excel</h3>
+        <p>Fast, error-free entry into Excel or Google Sheets — cleaning, formatting, and organizing so it's ready to use immediately.</p>
+        <div class="price"><span>From $21 / project</span><span>→</span></div>
       </div>
-      <div class="service-card fade-up">
-        <div class="svc-icon">🏢</div>
-        <div class="svc-title">B2B Lead Generation</div>
-        <div class="svc-desc">Build targeted B2B lead generation lists with verified contacts. Qualified, deduplicated leads delivered in organized spreadsheets — ready to plug into your CRM or outreach campaign.</div>
-        <div class="svc-price">From PKR 5,849 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">◈</div>
+        <h3>B2B Lead Generation</h3>
+        <p>Targeted, deduplicated lead lists with verified contacts, delivered ready to plug into your CRM or outreach sequence.</p>
+        <div class="price"><span>From $21 / project</span><span>→</span></div>
       </div>
-      <div class="service-card fade-up">
-        <div class="svc-icon">📄</div>
-        <div class="svc-title">PDF to Excel Conversion</div>
-        <div class="svc-desc">Convert handwritten or scanned PDFs into clean, structured Excel spreadsheets. Manually reviewed for accuracy — names, addresses, phone numbers all properly formatted.</div>
-        <div class="svc-price">From PKR 5,849 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">▥</div>
+        <h3>PDF to Excel Conversion</h3>
+        <p>Handwritten or scanned PDFs converted into clean, structured spreadsheets — manually reviewed line by line.</p>
+        <div class="price"><span>From $21 / project</span><span>→</span></div>
       </div>
-      <div class="service-card fade-up">
-        <div class="svc-icon">🌐</div>
-        <div class="svc-title">Web Research</div>
-        <div class="svc-desc">Keyword-based URL research, product listing research (Amazon/Etsy), and data scraping organized into clean Google Sheets with accurate links and relevant details.</div>
-        <div class="svc-price">From PKR 5,849 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">◇</div>
+        <h3>Web & Market Research</h3>
+        <p>Keyword-based URL research and product/data scraping, organized into clean sheets with accurate links and details.</p>
+        <div class="price"><span>From $21 / project</span><span>→</span></div>
       </div>
-      <div class="service-card fade-up">
-        <div class="svc-icon">✍️</div>
-        <div class="svc-title">Proofreading & Formatting</div>
-        <div class="svc-desc">Professional proofreading for academic books and manuscripts. 2,500+ pages reviewed for grammatical errors and stylistic consistency. Also handles document formatting and translation assistance.</div>
-        <div class="svc-price">From $20 / project</div>
+
+      <div class="scard reveal">
+        <div class="icon">✎</div>
+        <h3>Proofreading & Formatting</h3>
+        <p>Academic and manuscript proofreading — 2,500+ pages reviewed for grammar, consistency, and print-ready formatting.</p>
+        <div class="price"><span>From $20 / project</span><span>→</span></div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <div class="section-eyebrow">Expertise</div>
-    <h2 class="section-title">Tools &amp; Skills</h2>
-    <p class="section-sub">Years of hands-on experience across data tools, research platforms, and office software — all sharpened through real client projects.</p>
-    <div class="skills-layout">
-      <ul class="skill-list" id="skill-list">
-        <li class="skill-item">
-          <div class="skill-header"><span>Microsoft Excel & Google Sheets</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.95"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>Skip Tracing (TruePeopleSearch / Propwire)</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.95"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>Data Entry & Data Cleaning</span><span class="skill-pct">98%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.98"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>B2B Lead Generation</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.88"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>PDF Conversion & Formatting</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.90"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>CRM Software</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.80"></div></div>
-        </li>
-        <li class="skill-item">
-          <div class="skill-header"><span>Online Research & Data Scraping</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="--w:.90"></div></div>
-        </li>
-      </ul>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-icon">🎓</div>
-          <div>
-            <div class="cert-name">Bachelor's Degree</div>
-            <div class="cert-issuer">Bahauddin Zakariya University</div>
-          </div>
+<section id="skills" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Tools & Training</div>
+      <h2 class="section-title">Sharpened on <em>real client work</em>, not tutorials</h2>
+    </div>
+    <div class="skills-wrap">
+      <div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Data Entry & Data Cleaning</span><span class="pct">98%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="98"></div></div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">💻</div>
-          <div>
-            <div class="cert-name">I.T. Diploma — Grade A+ (100%)</div>
-            <div class="cert-issuer">Shaheen Computer College · Oct 2022</div>
-          </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Excel & Google Sheets</span><span class="pct">95%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="95"></div></div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">🏪</div>
-          <div>
-            <div class="cert-name">E-Commerce Management</div>
-            <div class="cert-issuer">DigiSkills.pk · Mar 2026</div>
-          </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Skip Tracing (TruePeopleSearch / Propwire)</span><span class="pct">95%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="95"></div></div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">📣</div>
-          <div>
-            <div class="cert-name">Affiliate Marketing</div>
-            <div class="cert-issuer">DigiSkills.pk · Mar 2026</div>
-          </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>PDF Conversion & Formatting</span><span class="pct">90%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="90"></div></div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">🗣️</div>
-          <div>
-            <div class="cert-name">Interactive English (Spoken)</div>
-            <div class="cert-issuer">English Language Centre, BZU · Jul 2023</div>
-          </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Online Research & Data Scraping</span><span class="pct">90%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="90"></div></div>
         </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>B2B Lead Generation</span><span class="pct">88%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>CRM Software</span><span class="pct">80%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="80"></div></div>
+        </div>
+      </div>
+
+      <div class="creds">
+        <div class="cred reveal"><div class="cn">01</div><div><h4>Associate Degree of Science</h4><span>Bahauddin Zakariya University, Multan</span></div></div>
+        <div class="cred reveal"><div class="cn">02</div><div><h4>I.T. Diploma — Grade A+ (100%)</h4><span>Shaheen Computer College · Oct 2022</span></div></div>
+        <div class="cred reveal"><div class="cn">03</div><div><h4>E-Commerce Management</h4><span>DigiSkills.pk · 2026</span></div></div>
+        <div class="cred reveal"><div class="cn">04</div><div><h4>Affiliate Marketing</h4><span>DigiSkills.pk · 2026</span></div></div>
+        <div class="cred reveal"><div class="cn">05</div><div><h4>Interactive English (Spoken)</h4><span>English Language Centre, BZU · 2023</span></div></div>
       </div>
     </div>
   </div>
@@ -738,109 +586,100 @@
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="container">
-    <div class="section-eyebrow">Background</div>
-    <h2 class="section-title">Work Experience</h2>
-    <p class="section-sub">A track record built across multiple industries — from real estate data to educational content — with consistent delivery and attention to detail.</p>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Background</div>
+      <h2 class="section-title">A track record across <em>data & real estate</em></h2>
+    </div>
     <div class="timeline">
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">Mar 2025 – Present · 1 yr 3 mos</div>
-        <div class="tl-role">Skip Tracer — Real Estate (Freelance, Remote)</div>
-        <div class="tl-company">Self-Employed · Upwork &amp; Direct Clients</div>
-        <div class="tl-desc">Providing professional Real Estate Skip Tracing for direct clients. Successfully skip-traced 1,000,000+ records, locating property owner details, phone numbers, and email addresses. Cross-referenced TruePeopleSearch and Propwire to deliver verified, organized contact lists.</div>
+      <div class="tl-item current reveal">
+        <div class="tl-date">Mar 2025 – Present</div>
+        <h4>Skip Tracer — Real Estate</h4>
+        <div class="tl-org">Self-Employed · Upwork & Direct Clients</div>
+        <p>Skip-traced 1,000,000+ records, locating property owner details, phone numbers, and emails. Cross-referenced TruePeopleSearch and Propwire to deliver verified, organized contact lists.</p>
       </div>
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">Aug 2025 – Apr 2026 · 9 mos</div>
-        <div class="tl-role">Enumerator</div>
-        <div class="tl-company">The Urban Unit · Full-time · Kahror Pakka, On-site</div>
-        <div class="tl-desc">Conducted door-to-door surveys for PSER (Punjab Socio-Economic Registry) under the Urban Unit Lodhran project. Surveyed 1,000+ households, collecting socio-economic data from families across assigned areas.</div>
+      <div class="tl-item reveal">
+        <div class="tl-date">Aug 2025 – Apr 2026</div>
+        <h4>Enumerator</h4>
+        <div class="tl-org">The Urban Unit · Kahror Pakka, On-site</div>
+        <p>Conducted door-to-door surveys for the Punjab Socio-Economic Registry, collecting socio-economic data from 1,000+ households.</p>
       </div>
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">May 2024 – Apr 2025 · 11 mos</div>
-        <div class="tl-role">PDF To Excel Conversion Specialist</div>
-        <div class="tl-company">Upwork · Freelance</div>
-        <div class="tl-desc">Converted large handwritten PDF documents into structured Excel spreadsheets containing names, addresses, phone numbers, and email addresses. Manually reviewed each page to ensure accurate data transfer and error-free output.</div>
+      <div class="tl-item reveal">
+        <div class="tl-date">May 2024 – Apr 2025</div>
+        <h4>PDF to Excel Conversion Specialist</h4>
+        <div class="tl-org">Upwork · Freelance</div>
+        <p>Converted large handwritten PDF documents into structured spreadsheets — names, addresses, phone numbers, emails — manually reviewed page by page.</p>
       </div>
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">Feb 2024 – Jun 2024 · 5 mos</div>
-        <div class="tl-role">Composer</div>
-        <div class="tl-company">The Educators Official · Full-time · Lahore</div>
-        <div class="tl-desc">Responsible for composing and formatting question papers and exam papers for all subjects across multiple grade levels. Coordinated with teachers to understand exam requirements and prepared polished, print-ready materials.</div>
+      <div class="tl-item reveal">
+        <div class="tl-date">Feb 2024 – Jun 2024</div>
+        <h4>Composer</h4>
+        <div class="tl-org">The Educators Official · Lahore</div>
+        <p>Composed and formatted exam papers across multiple grade levels, coordinating with teachers on requirements.</p>
       </div>
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">Sep 2023 – Jan 2024 · 5 mos</div>
-        <div class="tl-role">Data Entry Operator</div>
-        <div class="tl-company">Sikandar Foods</div>
-        <div class="tl-desc">Managed day-to-day data entry operations including inventory records, product listings, and financial data using Microsoft Excel. Maintained accurate logs of stock movement and supplier details to ensure error-free reporting.</div>
+      <div class="tl-item reveal">
+        <div class="tl-date">Sep 2023 – Jan 2024</div>
+        <h4>Data Entry Operator</h4>
+        <div class="tl-org">Sikandar Foods</div>
+        <p>Managed inventory records, product listings, and financial data in Excel, maintaining accurate stock and supplier logs.</p>
       </div>
-      <div class="tl-item fade-up">
-        <div class="tl-dot"></div>
-        <div class="tl-period">Jul 2022 – Mar 2023 · 9 mos</div>
-        <div class="tl-role">Spreadsheet Specialist</div>
-        <div class="tl-company">Crypto Free Gift · Remote</div>
-        <div class="tl-desc">Researched and collected product URLs from Amazon and Etsy based on specific keywords. Organized all findings into structured Google Spreadsheets with accurate links, product names, and relevant details — verified and properly formatted.</div>
+      <div class="tl-item reveal">
+        <div class="tl-date">Jul 2022 – Mar 2023</div>
+        <h4>Spreadsheet Specialist</h4>
+        <div class="tl-org">Crypto Free Gift · Remote</div>
+        <p>Researched product URLs from Amazon and Etsy, organizing findings into structured, verified Google Sheets.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <div class="section-eyebrow">My Work</div>
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-sub">Real client work — from massive skip tracing datasets to structured research projects — all delivered with accuracy and care.</p>
-    <div class="portfolio-grid">
-      <div class="port-card fade-up">
-        <div class="port-thumb t1">📋</div>
-        <div class="port-body">
-          <div class="port-tags">
-            <span class="port-tag">Skip Tracing</span>
-            <span class="port-tag">Real Estate</span>
-            <span class="port-tag">Data Entry</span>
+<section id="portfolio" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">My Work</div>
+      <h2 class="section-title">Featured <em>projects</em></h2>
+      <p class="section-sub">Hover — or tap on mobile — to flip each card and see the outcome.</p>
+    </div>
+    <div class="folio-grid">
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="fimg"><img id="projImg1" alt=""></div>
+            <div class="fnum">Real Estate</div>
+            <h3>Skip Tracing 10K+ Records</h3>
+            <span>Excel · Propwire · TruePeopleSearch</span>
           </div>
-          <div class="port-title">Skip Tracing 10k+ Records</div>
-          <div class="port-desc">Received a large dataset of property owner names and addresses. Used Propwire and TruePeopleSearch to find verified phone numbers and email addresses for each contact. Organized into clean, structured Excel spreadsheets.</div>
-          <div class="port-meta">
-            <span class="port-meta-item">💰 $800–$1000</span>
-            <span class="port-meta-item">📅 Jan 2025</span>
-          </div>
-        </div>
-      </div>
-      <div class="port-card fade-up">
-        <div class="port-thumb t2">🔗</div>
-        <div class="port-body">
-          <div class="port-tags">
-            <span class="port-tag">Web Research</span>
-            <span class="port-tag">Google Sheets</span>
-            <span class="port-tag">Data Scraping</span>
-          </div>
-          <div class="port-title">Keyword-Based URL Research</div>
-          <div class="port-desc">Built a comprehensive URL research database organized in Google Sheets using keyword-based category sorting. All entries verified for accuracy with product names, links, and relevant details properly formatted.</div>
-          <div class="port-meta">
-            <span class="port-meta-item">💰 Fixed Price</span>
-            <span class="port-meta-item">⭐ 4.7 Rating</span>
+          <div class="flip-face flip-back">
+            <p>Received a large dataset of property owner names and addresses. Found verified phone numbers and emails for each contact, organized into clean, structured spreadsheets.</p>
+            <div class="metrics"><span>💰 $800–1000</span><span>📅 2025</span></div>
           </div>
         </div>
       </div>
-      <div class="port-card fade-up">
-        <div class="port-thumb t3">📄</div>
-        <div class="port-body">
-          <div class="port-tags">
-            <span class="port-tag">PDF Conversion</span>
-            <span class="port-tag">Excel</span>
-            <span class="port-tag">Data Formatting</span>
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="fimg"><img id="projImg2" alt=""></div>
+            <div class="fnum">Research</div>
+            <h3>Keyword-Based URL Research</h3>
+            <span>Google Sheets · Data Scraping</span>
           </div>
-          <div class="port-title">Data Conversion Project</div>
-          <div class="port-desc">Converted handwritten and scanned PDF records into structured Excel spreadsheets. Manually reviewed 500+ pages ensuring consistent formatting, correct data placement, and error-free output ready for client use.</div>
-          <div class="port-meta">
-            <span class="port-meta-item">💰 $395</span>
-            <span class="port-meta-item">⭐ 4.7 Rating</span>
+          <div class="flip-face flip-back">
+            <p>Built a comprehensive URL research database in Google Sheets using keyword-based sorting — every entry verified for accuracy.</p>
+            <div class="metrics"><span>⭐ 4.7 rating</span><span>Fixed price</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="fimg"><img id="projImg3" alt=""></div>
+            <div class="fnum">Conversion</div>
+            <h3>PDF to Excel Data Project</h3>
+            <span>500+ Pages Reviewed</span>
+          </div>
+          <div class="flip-face flip-back">
+            <p>Converted handwritten and scanned PDF records into structured spreadsheets — manually reviewed for consistent formatting and error-free output.</p>
+            <div class="metrics"><span>💰 $395</span><span>⭐ 4.7 rating</span></div>
           </div>
         </div>
       </div>
@@ -848,250 +687,221 @@
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- TESTIMONIALS -->
 <section id="reviews">
-  <div class="container">
-    <div class="section-eyebrow">Testimonials</div>
-    <h2 class="section-title">What Clients Say</h2>
-    <p class="section-sub">Honest feedback from real clients across Upwork and Fiverr — built on consistent delivery and attention to detail.</p>
-    <div class="reviews-grid">
-      <div class="review-card fade-up">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Client Feedback</div>
+      <h2 class="section-title">What clients are <em>saying</em></h2>
+    </div>
+    <div class="test-grid">
+      <div class="tcard reveal">
         <div class="stars">★★★★★</div>
-        <div class="review-text">"Would not hesitate to recommend Muhammad!! The data was organized exactly as requested and delivered on time. Great communication throughout the project."</div>
-        <div class="review-author">Upwork Client</div>
-        <div class="review-platform">Data Conversion Project · 4.7★</div>
+        <p class="quote">Would not hesitate to recommend. The data came back organized exactly as requested and delivered on time, with great communication throughout.</p>
+        <div class="who"><div><b>Upwork Client</b><span>Data Conversion Project</span></div><span>4.7★</span></div>
       </div>
-      <div class="review-card fade-up">
+      <div class="tcard reveal">
         <div class="stars">★★★★★</div>
-        <div class="review-text">"Delivered the skip tracing results ahead of schedule with excellent accuracy. Found phone numbers and emails I couldn't locate anywhere else. Will definitely work with again."</div>
-        <div class="review-author">Real Estate Investor</div>
-        <div class="review-platform">Skip Tracing Project · 5★</div>
+        <p class="quote">Delivered the skip tracing results ahead of schedule with excellent accuracy — found contacts I couldn't locate anywhere else. Will work with again.</p>
+        <div class="who"><div><b>Real Estate Investor</b><span>Skip Tracing Project</span></div><span>5★</span></div>
       </div>
-      <div class="review-card fade-up">
+      <div class="tcard reveal">
         <div class="stars">★★★★☆</div>
-        <div class="review-text">"Fast, accurate, and professional. The proofreading was thorough and caught errors we had missed ourselves. Clean, well-structured final document delivered as promised."</div>
-        <div class="review-author">Academic Client</div>
-        <div class="review-platform">Proofreading Project · 4.6★</div>
+        <p class="quote">Fast, accurate, and professional. The proofreading was thorough and caught errors we'd missed ourselves — a clean, well-structured final document.</p>
+        <div class="who"><div><b>Academic Client</b><span>Proofreading Project</span></div><span>4.6★</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-eyebrow">Get In Touch</div>
-    <h2 class="section-title">Let's Work<br>Together</h2>
-    <p class="section-sub">Available for new projects on Fiverr, Upwork, or direct hire. Response time under 1 hour during business hours.</p>
-    <div class="contact-layout">
-      <div>
-        <div class="contact-links">
-          <a href="https://www.fiverr.com/alikhan2240?public_mode=true" target="_blank" class="contact-link">
-            <div class="cl-icon">🟢</div>
-            <div>
-              <div class="cl-label">Fiverr</div>
-              <div class="cl-value">fiverr.com/alikhan2240</div>
-            </div>
-          </a>
-          <a href="https://www.upwork.com/freelancers/~01ee837775c0497f2f" target="_blank" class="contact-link">
-            <div class="cl-icon">🔵</div>
-            <div>
-              <div class="cl-label">Upwork</div>
-              <div class="cl-value">upwork.com/freelancers/~01ee837775c0497f2f</div>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/ali-hasnain422" target="_blank" class="contact-link">
-            <div class="cl-icon">💼</div>
-            <div>
-              <div class="cl-label">LinkedIn</div>
-              <div class="cl-value">linkedin.com/in/ali-hasnain422</div>
-            </div>
-          </a>
-          <a href="mailto:alihasnainwork990@gmail.com" class="contact-link">
-            <div class="cl-icon">📧</div>
-            <div>
-              <div class="cl-label">Email</div>
-              <div class="cl-value">alihasnainwork990@gmail.com</div>
-            </div>
-          </a>
-          <a href="https://www.facebook.com/alihasnainwork/" target="_blank" class="contact-link">
-            <div class="cl-icon">📘</div>
-            <div>
-              <div class="cl-label">Facebook</div>
-              <div class="cl-value">facebook.com/alihasnainwork</div>
-            </div>
-          </a>
-          <a href="https://www.instagram.com/alihasnainwork/" target="_blank" class="contact-link">
-            <div class="cl-icon">📸</div>
-            <div>
-              <div class="cl-label">Instagram</div>
-              <div class="cl-value">instagram.com/alihasnainwork</div>
-            </div>
-          </a>
-          <a href="https://www.tiktok.com/@alihasnainwork" target="_blank" class="contact-link">
-            <div class="cl-icon">🎵</div>
-            <div>
-              <div class="cl-label">TikTok</div>
-              <div class="cl-value">tiktok.com/@alihasnainwork</div>
-            </div>
-          </a>
-          <a href="https://www.pinterest.com/alihasnainwork990/" target="_blank" class="contact-link">
-            <div class="cl-icon">📌</div>
-            <div>
-              <div class="cl-label">Pinterest</div>
-              <div class="cl-value">pinterest.com/alihasnainwork990</div>
-            </div>
-          </a>
+<section id="contact" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2 class="section-title">Let's get your <em>data</em> sorted</h2>
+      <p class="section-sub">Tell me what you need — I'll reply with a clear scope and price, usually within the hour.</p>
+    </div>
+    <div class="contact-wrap">
+      <form class="form-panel reveal" id="contactForm">
+        <div class="field"><label>Your Name</label><input type="text" required placeholder="Jane Cooper"></div>
+        <div class="field"><label>Email Address</label><input type="email" required placeholder="jane@company.com"></div>
+        <div class="field">
+          <label>Service Needed</label>
+          <select required>
+            <option value="">Select a service</option>
+            <option>Real Estate Skip Tracing</option>
+            <option>Data Entry & Excel</option>
+            <option>B2B Lead Generation</option>
+            <option>PDF to Excel Conversion</option>
+            <option>Web & Market Research</option>
+            <option>Proofreading & Formatting</option>
+            <option>Something else</option>
+          </select>
         </div>
-      </div>
-      <div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input type="text" name="name" class="form-input" placeholder="John Smith" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Service Needed</label>
-            <input type="text" name="service" class="form-input" placeholder="e.g. Skip Tracing, Data Entry, Lead Generation...">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Project Details</label>
-            <textarea name="message" class="form-textarea" placeholder="Tell me about your project — scope, timeline, and any specific requirements..." required></textarea>
-          </div>
-          <button type="submit" class="form-btn" id="submitBtn">Send Message →</button>
-          <div id="formSuccess" style="display:none; margin-top:1rem; color:#00c77a; font-weight:600; font-size:.9rem;">✅ Message sent! Ali will respond within 1 hour.</div>
-          <div id="formError" style="display:none; margin-top:1rem; color:#ff5555; font-weight:600; font-size:.9rem;">❌ Something went wrong. Please try again or email directly.</div>
-        </form>
+        <div class="field"><label>Project Details</label><textarea required placeholder="Tell me about your project, record count, and timeline..."></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+        <div class="form-note">This opens your email app with the details pre-filled to alihasnainwork990@gmail.com.</div>
+        <div class="form-success" id="formSuccess">✓ Your email app should now be open. Send it and I'll reply within an hour.</div>
+      </form>
 
-        <script>
-          document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const success = document.getElementById('formSuccess');
-            const error = document.getElementById('formError');
-            btn.textContent = 'Sending...';
-            btn.style.opacity = '0.7';
-            btn.disabled = true;
-            success.style.display = 'none';
-            error.style.display = 'none';
-            try {
-              const response = await fetch('https://formspree.io/f/xeedabad', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: new FormData(this)
-              });
-              if (response.ok) {
-                success.style.display = 'block';
-                this.reset();
-              } else {
-                error.style.display = 'block';
-              }
-            } catch(err) {
-              error.style.display = 'block';
-            }
-            btn.textContent = 'Send Message →';
-            btn.style.opacity = '1';
-            btn.disabled = false;
-          });
-        </script>
+      <div class="direct-panel reveal">
+        <h4>Or Reach Me Directly</h4>
+        <div class="direct-links">
+          <a class="dlink" href="https://www.fiverr.com/alikhan2240?public_mode=true" target="_blank">🟢 Fiverr — fiverr.com/alikhan2240 <span class="arrow">↗</span></a>
+          <a class="dlink" href="https://www.upwork.com/freelancers/~01ee837775c0497f2f" target="_blank">🔵 Upwork Profile <span class="arrow">↗</span></a>
+          <a class="dlink" href="https://www.linkedin.com/in/ali-hasnain422" target="_blank">💼 LinkedIn <span class="arrow">↗</span></a>
+          <a class="dlink" href="mailto:alihasnainwork990@gmail.com">📧 alihasnainwork990@gmail.com <span class="arrow">↗</span></a>
+          <a class="dlink" href="https://www.facebook.com/alihasnainwork/" target="_blank">📘 Facebook <span class="arrow">↗</span></a>
+          <a class="dlink" href="https://www.instagram.com/alihasnainwork/" target="_blank">📸 Instagram <span class="arrow">↗</span></a>
+        </div>
+        <div class="response-box">
+          <div class="rt">&lt; 1 hr</div>
+          <div class="rl">Typical response time during business hours, Pakistan Standard Time.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Ali<span>.</span>H</div>
-  <div>© 2025 Ali Hasnain · Data Entry &amp; Skip Tracing Expert · Pakistan</div>
-  <div>Made with precision 🎯</div>
+  <div class="brand" style="justify-content:center;"><span class="seal">AH</span> Ali Hasnain</div>
+  <p>© 2026 Ali Hasnain · Skip Tracing, Data & Lead Generation Specialist · Pakistan, remote worldwide</p>
 </footer>
 
-<script>
-  // Intersection Observer for fade-up animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, (i % 4) * 120);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Skill bar animation
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.skill-fill').forEach((fill, i) => {
-          const w = getComputedStyle(fill).getPropertyValue('--w');
-          setTimeout(() => {
-            fill.style.width = (parseFloat(w) * 100) + '%';
-            fill.classList.add('animate');
-          }, i * 100);
-        });
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  const skillList = document.getElementById('skill-list');
-  if (skillList) skillObserver.observe(skillList);
-
-  // Set skill fill widths via CSS custom properties to proper %
-  document.querySelectorAll('.skill-fill').forEach(fill => {
-    const w = fill.style.getPropertyValue('--w') || fill.getAttribute('style').match(/--w:([\d.]+)/)?.[1];
-    if (w) {
-      fill.style.setProperty('--target-w', (parseFloat(w) * 100) + '%');
-    }
-  });
-</script>
-
-<style>
-  /* Override skill bars to work with animation */
-  .skill-fill {
-    width: 0%;
-    transition: width 1s cubic-bezier(.16,1,.3,1) !important;
-    transform: none !important;
-  }
-  .skill-fill[style*="--w:0.95"] { --target: 95%; }
-  .skill-fill[style*="--w:0.98"] { --target: 98%; }
-  .skill-fill[style*="--w:0.88"] { --target: 88%; }
-  .skill-fill[style*="--w:0.90"] { --target: 90%; }
-  .skill-fill[style*="--w:0.80"] { --target: 80%; }
-</style>
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="wrap">
+    <div class="sb-msg">Have a project in mind? <b>I usually reply within an hour.</b></div>
+    <div class="sb-actions">
+      <a href="#contact" class="sb-ghost" style="border:1px solid var(--slate-dim); border-radius:2px; color:var(--white); padding:10px 18px; font-family:var(--font-mono); font-size:12px;">View Contact Form</a>
+      <a href="https://www.fiverr.com/alikhan2240?public_mode=true" target="_blank" class="sb-primary" style="border-radius:2px; padding:10px 18px; font-family:var(--font-mono); font-size:12px;">Message on Fiverr →</a>
+    </div>
+  </div>
+</div>
 
 <script>
-  // Re-do skill animations cleanly
-  const bars = document.querySelectorAll('.skill-fill');
-  bars.forEach(bar => {
-    const styleStr = bar.getAttribute('style') || '';
-    const match = styleStr.match(/--w:([\d.]+)/);
-    if (match) {
-      bar._target = parseFloat(match[1]) * 100 + '%';
-      bar.style.width = '0%';
-    }
+/* ============================================================
+   PHOTOS — paste any image link between the quotes below.
+   Leave a line as "" to keep the default look for that spot.
+   Direct image links only (ending in .jpg/.png/.webp etc).
+   Tip: upload a photo to https://imgur.com and paste its
+   "direct link" here.
+   ============================================================ */
+const PHOTOS = {
+  profile:  "https://drive.google.com/thumbnail?id=1tIxDLBu0gD5cOJBbTmieZr8-QNblVWqd&sz=w1000",   // your headshot or logo — shows in the hero
+  project1: "https://drive.google.com/thumbnail?id=1iCwn_fFQ2aNMpzw-g8Nn3NsyFjzjlIEd&sz=w1000",   // Skip Tracing project image
+  project2: "https://drive.google.com/thumbnail?id=1uoZtNy87B-QSB6xOjoxGzw--9P6L4yzy&sz=w1000",   // Research project image
+  project3: "https://drive.google.com/thumbnail?id=1bdMEDZGAGzlWjsEsL02dirDwans4AtvY&sz=w1000"    // PDF Conversion project image
+};
+
+function loadPhoto(imgEl, url, onLoadedExtra){
+  if(!url) return;
+  imgEl.src = url;
+  imgEl.onload = ()=>{ imgEl.classList.add('loaded'); if(onLoadedExtra) onLoadedExtra(); };
+}
+loadPhoto(document.getElementById('heroAvatarImg'), PHOTOS.profile);
+loadPhoto(document.getElementById('projImg1'), PHOTOS.project1);
+loadPhoto(document.getElementById('projImg2'), PHOTOS.project2);
+loadPhoto(document.getElementById('projImg3'), PHOTOS.project3);
+
+// ---- scroll reveal ----
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+},{threshold:0.15});
+revealEls.forEach(el=>io.observe(el));
+
+// ---- skill bars fill on view ----
+const bars = document.querySelectorAll('.bar-fill');
+const barIo = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.style.width = e.target.dataset.w + '%'; barIo.unobserve(e.target); }
   });
+},{threshold:0.4});
+bars.forEach(b=>barIo.observe(b));
 
-  const skillObserver2 = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      bars.forEach((bar, i) => {
-        setTimeout(() => {
-          if (bar._target) bar.style.width = bar._target;
-        }, i * 120);
-      });
-      skillObserver2.disconnect();
-    }
-  }, { threshold: 0.2 });
+// ---- 3D tilt on service cards ----
+document.querySelectorAll('.scard').forEach(card=>{
+  card.addEventListener('mousemove', (e)=>{
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const rx = ((y / r.height) - 0.5) * -12;
+    const ry = ((x / r.width) - 0.5) * 12;
+    card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', ()=>{ card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)'; });
+});
 
-  const skillSection = document.getElementById('skills');
-  if (skillSection) skillObserver2.observe(skillSection);
+// ---- deck parallax follows mouse ----
+const deck = document.getElementById('deck');
+const stage = document.querySelector('.stage');
+stage.addEventListener('mousemove', (e)=>{
+  const r = stage.getBoundingClientRect();
+  const x = e.clientX - r.left, y = e.clientY - r.top;
+  const rx = ((y / r.height) - 0.5) * -10;
+  const ry = ((x / r.width) - 0.5) * 14;
+  deck.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+});
+stage.addEventListener('mouseleave', ()=>{ deck.style.transform = 'rotateX(0) rotateY(0)'; });
+
+// ---- trace card demo loop ----
+const sampleSets = [
+  { name:"Robert Whitfield", phone:"(214) 555-0192", email:"r.whitfield@mail.com", addr:"482 Larkspur Dr, Dallas, TX" },
+  { name:"Maria Contreras", phone:"(602) 555-0143", email:"m.contreras@mail.com", addr:"219 Ocotillo Ave, Mesa, AZ" },
+  { name:"James Okafor", phone:"(404) 555-0177", email:"j.okafor@mail.com", addr:"77 Peachwood Ln, Atlanta, GA" }
+];
+let setIndex = 0;
+const f1=document.getElementById('f1'), f2=document.getElementById('f2'), f3=document.getElementById('f3'), f4=document.getElementById('f4');
+const rcStatus=document.getElementById('rcStatus'), scanline=document.getElementById('scanline'), rcTimer=document.getElementById('rcTimer');
+
+function skeletons(){
+  [f1,f2,f3,f4].forEach(f=>{ f.innerHTML='<span class="skel"></span>'; f.classList.remove('revealed'); });
+  rcStatus.textContent='Searching'; rcStatus.classList.remove('found');
+}
+function reveal(el, text, delay){
+  setTimeout(()=>{ el.innerHTML = text + ' <span class="check">✓</span>'; el.classList.add('revealed'); }, delay);
+}
+let timerVal = 0, timerInt;
+function runTrace(){
+  const d = sampleSets[setIndex % sampleSets.length];
+  setIndex++;
+  skeletons();
+  scanline.classList.remove('active'); void scanline.offsetWidth; scanline.classList.add('active');
+  timerVal = 0;
+  clearInterval(timerInt);
+  timerInt = setInterval(()=>{ timerVal += 0.1; rcTimer.textContent = timerVal.toFixed(1)+'s'; }, 100);
+  reveal(f1, d.name, 700);
+  reveal(f2, d.phone, 1200);
+  reveal(f3, d.email, 1700);
+  reveal(f4, d.addr, 2200);
+  setTimeout(()=>{ rcStatus.textContent='Match Found'; rcStatus.classList.add('found'); clearInterval(timerInt); }, 2500);
+}
+runTrace();
+setInterval(runTrace, 6000);
+
+// ---- flip card tap for touch devices ----
+document.querySelectorAll('.flip-card').forEach(card=>{
+  card.addEventListener('click', ()=>{ card.classList.toggle('tapped'); });
+});
+
+// ---- sticky bar visibility ----
+const stickyBar = document.getElementById('stickyBar');
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY > window.innerHeight * 0.9){ stickyBar.classList.add('show'); }
+  else{ stickyBar.classList.remove('show'); }
+});
+
+// ---- contact form -> mailto ----
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const inputs = this.querySelectorAll('input, select, textarea');
+  const name = inputs[0].value, email = inputs[1].value, service = inputs[2].value, details = inputs[3].value;
+  const subject = encodeURIComponent(`Project Inquiry: ${service}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\n\nDetails:\n${details}`);
+  window.location.href = `mailto:alihasnainwork990@gmail.com?subject=${subject}&body=${body}`;
+  document.getElementById('formSuccess').classList.add('show');
+});
 </script>
 </body>
 </html>
