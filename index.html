@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali Hasnain — Skip Tracing, Data & Lead Generation Specialist</title>
-<link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1tIxDLBu0gD5cOJBbTmieZr8-QNblVWqd&sz=w256">
+<link rel="icon" type="image/png" sizes="32x32" href="ali-logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="ali-logo.png">
+<link rel="apple-touch-icon" href="ali-logo.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -102,8 +104,10 @@ nav{display:flex; align-items:center; justify-content:space-between; height:78px
   font-family:var(--font-mono); font-size:13px; color:var(--brass-light);
   position:relative;
   overflow:hidden;
+  padding:0;
+  flex:0 0 38px;
 }
-.seal img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:none;}
+.seal img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:none; transform:scale(1.04);}
 .seal img.loaded{display:block;}
 .seal::after{
   content:''; position:absolute; inset:-5px; border-radius:50%;
@@ -147,8 +151,10 @@ nav{display:flex; align-items:center; justify-content:space-between; height:78px
   display:flex; align-items:center; justify-content:center;
   background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
   font-family:var(--font-mono); font-size:20px; color:var(--brass-light);
+  padding:0;
+  position:relative;
 }
-.hero-avatar img{width:100%; height:100%; object-fit:cover; display:none;}
+.hero-avatar img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:none; transform:scale(1.04);}
 .hero-avatar img.loaded{display:block;}
 
 .flip-front .fimg{
@@ -793,7 +799,7 @@ footer p{font-size:12.5px; color:var(--slate-dim);}
    "direct link" here.
    ============================================================ */
 const PHOTOS = {
-  profile:  "https://drive.google.com/thumbnail?id=1tIxDLBu0gD5cOJBbTmieZr8-QNblVWqd&sz=w1000",   // your headshot or logo — shows in the hero
+  profile:  "ali-logo.png",   // your headshot or logo — shows in the hero
   project1: "https://drive.google.com/thumbnail?id=1iCwn_fFQ2aNMpzw-g8Nn3NsyFjzjlIEd&sz=w1000",   // Skip Tracing project image
   project2: "https://drive.google.com/thumbnail?id=1uoZtNy87B-QSB6xOjoxGzw--9P6L4yzy&sz=w1000",   // Research project image
   project3: "https://drive.google.com/thumbnail?id=1bdMEDZGAGzlWjsEsL02dirDwans4AtvY&sz=w1000"    // PDF Conversion project image
