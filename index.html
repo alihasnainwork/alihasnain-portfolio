@@ -295,10 +295,24 @@ section{position:relative; z-index:1; padding:120px 0;}
 .skills-wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px;}
 @media(max-width:900px){.skills-wrap{grid-template-columns:1fr; gap:40px;}}
 .skill-row{margin-bottom:22px;}
-.skill-row .sr-top{display:flex; justify-content:space-between; font-size:14px; margin-bottom:9px;}
-.skill-row .sr-top .pct{font-family:var(--font-mono); color:var(--brass-light);}
+.skill-row .sr-top{display:flex; justify-content:space-between; font-size:14px; margin-bottom:9px; gap:12px;}
+.skill-row .sr-top span:first-child{flex:1;}
+.skill-row .sr-top .pct{font-family:var(--font-mono); color:var(--brass-light); flex:0 0 auto;}
 .bar{height:5px; background:var(--ink-3); border-radius:4px; overflow:hidden;}
 .bar-fill{height:100%; width:0; background:linear-gradient(90deg, var(--brass-dim), var(--brass-light)); border-radius:4px; transition:width 1.4s cubic-bezier(.2,.8,.2,1);}
+
+.skills-subhead{
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--brass-dim); margin:34px 0 18px; padding-top:18px; border-top:1px solid var(--line);
+}
+.skills-subhead:first-child{margin-top:0; padding-top:0; border-top:none;}
+
+.tag-list{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:8px;}
+.tag{
+  font-family:var(--font-mono); font-size:12px; color:var(--brass-light);
+  border:1px solid rgba(201,162,75,0.3); background:rgba(201,162,75,0.06);
+  padding:8px 14px; border-radius:20px; letter-spacing:0.01em;
+}
 
 .creds{display:flex; flex-direction:column; gap:18px;}
 .cred{
@@ -554,16 +568,13 @@ footer p{font-size:12.5px; color:var(--slate-dim);}
     </div>
     <div class="skills-wrap">
       <div>
+        <div class="skills-subhead reveal">Core Data Skills</div>
         <div class="skill-row reveal">
           <div class="sr-top"><span>Data Entry & Data Cleaning</span><span class="pct">98%</span></div>
           <div class="bar"><div class="bar-fill" data-w="98"></div></div>
         </div>
         <div class="skill-row reveal">
           <div class="sr-top"><span>Excel & Google Sheets</span><span class="pct">95%</span></div>
-          <div class="bar"><div class="bar-fill" data-w="95"></div></div>
-        </div>
-        <div class="skill-row reveal">
-          <div class="sr-top"><span>Skip Tracing (TruePeopleSearch / Propwire)</span><span class="pct">95%</span></div>
           <div class="bar"><div class="bar-fill" data-w="95"></div></div>
         </div>
         <div class="skill-row reveal">
@@ -575,12 +586,50 @@ footer p{font-size:12.5px; color:var(--slate-dim);}
           <div class="bar"><div class="bar-fill" data-w="90"></div></div>
         </div>
         <div class="skill-row reveal">
+          <div class="sr-top"><span>CRM Updating</span><span class="pct">85%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="85"></div></div>
+        </div>
+
+        <div class="skills-subhead reveal">Real Estate Lead Generation</div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Skip Tracing (TruePeopleSearch / Propwire)</span><span class="pct">95%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="95"></div></div>
+        </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Property Research</span><span class="pct">92%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="92"></div></div>
+        </div>
+        <div class="skill-row reveal">
           <div class="sr-top"><span>B2B Lead Generation</span><span class="pct">88%</span></div>
           <div class="bar"><div class="bar-fill" data-w="88"></div></div>
         </div>
         <div class="skill-row reveal">
-          <div class="sr-top"><span>CRM Software</span><span class="pct">80%</span></div>
-          <div class="bar"><div class="bar-fill" data-w="80"></div></div>
+          <div class="sr-top"><span>Vacant Property Lists</span><span class="pct">88%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Tax Delinquent Leads</span><span class="pct">86%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="86"></div></div>
+        </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>Probate Leads</span><span class="pct">85%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-row reveal">
+          <div class="sr-top"><span>LLC Research</span><span class="pct">82%</span></div>
+          <div class="bar"><div class="bar-fill" data-w="82"></div></div>
+        </div>
+
+        <div class="skills-subhead reveal">Platforms & Software</div>
+        <div class="tag-list reveal">
+          <span class="tag">PropStream</span>
+          <span class="tag">BatchLeads</span>
+          <span class="tag">REsimpli</span>
+          <span class="tag">Podio</span>
+          <span class="tag">TruePeopleSearch</span>
+          <span class="tag">Propwire</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Google Sheets</span>
         </div>
       </div>
 
