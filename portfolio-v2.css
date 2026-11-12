@@ -27,3 +27,27 @@
 .review-marketplaces a{display:flex;justify-content:space-between;gap:8px;padding:12px 0;border-bottom:1px solid #e7f0ed;font-size:13px;font-weight:800;color:#117d70}
 @media(max-width:950px){.review-grid{grid-template-columns:1fr 1fr}.review-primary{grid-column:1/-1}}
 @media(max-width:580px){.review-grid{grid-template-columns:1fr}.review-primary{grid-column:auto}.review-rating strong{font-size:56px}.review-primary,.review-secondary{padding:23px}}
+
+
+/* Featured ongoing real-world client project */
+.current-project{border-radius:21px;overflow:hidden;border:1px solid #c7e5dd;background:linear-gradient(120deg,#123956,#0a6b65);color:white;margin:0 0 24px;box-shadow:0 18px 40px #153e4818;scroll-margin-top:110px}
+.current-project-main{padding:30px}
+.current-topline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;color:#cce7e4}
+.current-live{color:#d8fff2;font-weight:850;font-size:10px;letter-spacing:.09em;display:inline-flex;align-items:center;gap:9px;padding:8px 10px;border-radius:50px;background:#ffffff16;border:1px solid #ffffff35}
+.current-project-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;margin-top:29px}
+.current-label{font-size:10px;color:#96e8d6;font-weight:900;letter-spacing:.15em;margin:0 0 12px}
+.current-copy h3{font-size:clamp(28px,3.2vw,42px);letter-spacing:-.05em;line-height:1.15;margin:0 0 14px}
+.current-copy h3 em{color:#9de9d9;font-style:normal}
+.current-copy>p:not(.current-label){color:#d5e6e8;font-size:13px;line-height:1.85;max-width:620px}
+.current-points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;color:#e5fff7;font-size:11px;font-weight:750}
+.current-workflow{background:#ffffffef;color:#193e4f;border-radius:14px;padding:21px;box-shadow:0 11px 25px #042c3542}
+.workflow-title{display:flex;justify-content:space-between;gap:10px;color:#087e70;letter-spacing:.13em;font-size:10px;font-weight:900;margin-bottom:14px}
+.workflow-title span{color:#78918d}
+.workflow-line{display:flex;gap:13px;align-items:center;border-bottom:1px solid #e5eeed;padding:11px 0}
+.workflow-line:last-child{border-bottom:0}
+.workflow-line b{height:32px;width:32px;border-radius:9px;background:#e5f6f1;display:grid;place-items:center;color:#078778;font-size:11px}
+.workflow-line strong{display:block;color:#194458;font-size:12px}
+.workflow-line small{display:block;font-size:10px;color:#6a838c;margin-top:2px}
+.current-project-foot{background:#ffffff12;border-top:1px solid #ffffff24;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:14px 30px;font-size:10px;color:#d0e9e7}
+@media(max-width:780px){.current-project-grid{grid-template-columns:1fr}.current-project-main{padding:23px}.current-project-foot{padding:14px 23px}}
+@media(max-width:480px){.current-points{grid-template-columns:1fr}.current-project-grid{gap:20px}}
