@@ -65,3 +65,23 @@
 .direct-review-bottom{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;color:#0a8671;font-size:12px;font-weight:800;border-top:1px solid #e4efeb;padding-top:18px}
 .direct-review-source{font-size:11px!important;color:#7c9296;margin:13px 0 0}
 @media(max-width:580px){.direct-testimonial{padding:22px}.direct-review-rating{align-items:flex-start}.direct-review-top{flex-direction:column;gap:11px}}
+
+
+/* Skip-tracing positioning: featured card, pricing, honeypot, legal text */
+.service-featured{border-color:#0fad94;background:linear-gradient(160deg,#f1fbf8,#fff);box-shadow:0 14px 34px #0a8a7418}
+.service-featured .service-icon{background:#0a8a74;color:#fff}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;align-items:stretch}
+.price-card{border:1px solid var(--line);border-radius:20px;padding:30px 26px;background:#fff;display:flex;flex-direction:column;box-shadow:0 9px 26px #193e500a}
+.price-card h3{font-size:21px;letter-spacing:-.03em;margin:12px 0 4px}
+.price-card .price-tag{font-size:10px;letter-spacing:.15em;font-weight:900;color:#0b8d78}
+.price-amount{font-size:38px;font-weight:850;letter-spacing:-.05em;line-height:1.1;margin:8px 0 2px;color:var(--navy)}
+.price-amount small{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:0}
+.price-sub{font-size:12.5px;color:var(--muted);margin:0 0 18px}
+.price-card ul{list-style:none;padding:0;margin:0 0 24px;flex:1}
+.price-card li{font-size:13px;font-weight:650;color:#31566a;padding:7px 0;border-bottom:1px solid #edf3f0}
+.price-card li:last-child{border-bottom:0}
+.price-popular{border:2px solid #0fad94;box-shadow:0 18px 40px #0a8a7424}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.disclaimer a{color:#078874}
+.form-buttons .btn[disabled]{opacity:.6;cursor:wait}
+@media(max-width:900px){.price-grid{grid-template-columns:1fr}}
