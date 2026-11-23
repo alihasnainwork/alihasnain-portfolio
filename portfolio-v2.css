@@ -96,3 +96,70 @@
 .price-amount{background:linear-gradient(120deg,#102b47,#0a7a6c);-webkit-background-clip:text;background-clip:text;color:transparent}
 .price-amount small{-webkit-text-fill-color:var(--muted)}
 @media(prefers-reduced-motion:reduce){.price-card{transition:none}}
+
+
+/* ===== Motion: entrance, scroll reveal, hover polish ===== */
+:root{--rot:1deg}
+@media(max-width:780px){:root{--rot:0deg}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dashIn{from{opacity:0;transform:translateY(34px) rotate(calc(var(--rot) + 3deg)) scale(.97)}to{opacity:1;transform:translateY(0) rotate(var(--rot)) scale(1)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--rot))}50%{transform:translateY(-9px) rotate(var(--rot))}}
+@keyframes pulseDot{0%{box-shadow:0 0 0 0 #65d9b388}70%{box-shadow:0 0 0 9px #65d9b300}100%{box-shadow:0 0 0 0 #65d9b300}}
+@keyframes glowDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,30px) scale(1.12)}}
+@keyframes waRing{0%{box-shadow:0 13px 32px #116c5455,0 0 0 0 #079c7666}70%{box-shadow:0 13px 32px #116c5455,0 0 0 14px #079c7600}100%{box-shadow:0 13px 32px #116c5455,0 0 0 0 #079c7600}}
+
+.hero{position:relative}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(circle,#2fd6b244,transparent 68%);animation:glowDrift 14s ease-in-out infinite;pointer-events:none}
+.hero-content{position:relative;z-index:1}
+.hero-content>div:first-child>*{animation:fadeUp .85s cubic-bezier(.2,.7,.2,1) both}
+.hero-content>div:first-child>*:nth-child(1){animation-delay:.05s}
+.hero-content>div:first-child>*:nth-child(2){animation-delay:.18s}
+.hero-content>div:first-child>*:nth-child(3){animation-delay:.32s}
+.hero-content>div:first-child>*:nth-child(4){animation-delay:.46s}
+.hero-content>div:first-child>*:nth-child(5){animation-delay:.6s}
+.hero .dashboard{animation:dashIn 1s cubic-bezier(.2,.7,.2,1) .35s both,floaty 7s ease-in-out 1.5s infinite}
+.online-dot{animation:pulseDot 2.4s ease-out infinite}
+.dash-task{opacity:0;animation:fadeUp .6s ease both}
+.dash-task:nth-of-type(1){animation-delay:.9s}.dash-task:nth-of-type(2){animation-delay:1.05s}.dash-task:nth-of-type(3){animation-delay:1.2s}.dash-task:nth-of-type(4){animation-delay:1.35s}
+
+/* header and progress bar */
+.nav{transition:height .25s ease}
+.site-header{transition:box-shadow .25s ease,background .25s ease}
+.site-header.scrolled{box-shadow:0 10px 30px #102b4718}
+.site-header.scrolled .nav{height:64px}
+#scroll-progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#06a98d,#35d6b8);z-index:100;pointer-events:none}
+.site-header nav>a:not(.btn){position:relative}
+.site-header nav>a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.site-header nav>a:not(.btn):hover::after{transform:scaleX(1)}
+
+/* scroll reveal (classes added by JS only, so content is never hidden without JS) */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .75s cubic-bezier(.2,.7,.2,1) var(--d,0s)!important}
+.rv.in{opacity:1;transform:none}
+
+/* hover polish */
+.btn-green,.btn-white{position:relative;overflow:hidden}
+.btn-green::after,.btn-white::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn-green:hover::after,.btn-white:hover::after{left:140%}
+.service-card .service-icon{transition:transform .3s ease,background .3s ease}
+.service-card:hover .service-icon{transform:rotate(-7deg) scale(1.1)}
+.service-card a span{display:inline-block;transition:transform .2s ease}
+.service-card a:hover span{transform:translate(3px,-3px)}
+.work-card{transition:transform .3s ease,box-shadow .3s ease}
+.work-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px #193e5020}
+.steps>div{transition:transform .25s ease,border-color .25s ease}
+.steps>div:hover{transform:translateY(-4px);border-color:var(--mint)}
+.faq-grid details{transition:box-shadow .25s ease,border-color .25s ease}
+.faq-grid details:hover,.faq-grid details[open]{border-color:#9fd6cb;box-shadow:0 8px 22px #193e5010}
+.faq-grid details[open] summary{color:var(--teal)}
+.faq-grid details[open] p{animation:fadeUp .35s ease both}
+.floating-wa{animation:waRing 3.2s ease-out 2s infinite}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .dash-task{opacity:1}
+  #scroll-progress{display:none}
+}
+
+.hero h1{font-size:clamp(38px,4.7vw,62px);text-wrap:balance}
+@media(max-width:520px){.hero h1{font-size:38px}}

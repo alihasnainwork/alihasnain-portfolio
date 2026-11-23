@@ -18,6 +18,68 @@
     });
   }
 
+  // ===== Motion: header state, progress bar, scroll reveal, count-up =====
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const header = document.querySelector(".site-header");
+  const bar = document.createElement("div");
+  bar.id = "scroll-progress";
+  bar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(bar);
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY || 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (max > 0 ? Math.min(1, y / max) : 0) + ")";
+      if (header) header.classList.toggle("scrolled", y > 12);
+      ticking = false;
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const groups = [".service-grid", ".price-grid", ".steps", ".work-grid", ".faq-grid", ".review-grid", ".trust-grid", ".about-grid", ".contact-grid"];
+    const singles = [".section-head", ".current-project", ".direct-testimonial", ".big-cta .wrap", ".disclaimer"];
+    const targets = [];
+    groups.forEach(sel => document.querySelectorAll(sel).forEach(g => {
+      Array.from(g.children).forEach((c, i) => { c.style.setProperty("--d", Math.min(i, 7) * 0.08 + "s"); targets.push(c); });
+    }));
+    singles.forEach(sel => document.querySelectorAll(sel).forEach(el => { if (!targets.includes(el)) targets.push(el); }));
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        el.classList.add("in");
+        io.unobserve(el);
+        // remove helper classes after the reveal so normal hover transitions work again
+        setTimeout(() => { el.classList.remove("rv", "in"); el.style.removeProperty("--d"); }, 1200);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(el => { el.classList.add("rv"); io.observe(el); });
+  }
+
+  // Count-up for elements marked data-countup (final text is kept as the end state)
+  document.querySelectorAll("[data-countup]").forEach(el => {
+    const finalText = el.textContent;
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
+    el.textContent = "0K+";
+    const cio = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      cio.disconnect();
+      const start = performance.now(), dur = 1600;
+      (function tick(now) {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = t < 1 ? Math.round(eased * 1000) + "K+" : finalText;
+        if (t < 1) requestAnimationFrame(tick);
+      })(start);
+    }, { threshold: 0.6 });
+    cio.observe(el);
+  });
+
   // Inquiry form
   const form = document.getElementById("inquiry-form");
   if (!form) return;
