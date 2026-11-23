@@ -85,3 +85,14 @@
 .disclaimer a{color:#078874}
 .form-buttons .btn[disabled]{opacity:.6;cursor:wait}
 @media(max-width:900px){.price-grid{grid-template-columns:1fr}}
+
+/* Pricing polish */
+.price-card{position:relative;transition:transform .25s,box-shadow .25s}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 22px 46px #193e5020}
+.price-card .price-tag{display:inline-block;align-self:flex-start;background:#e4f6f1;padding:5px 10px;border-radius:50px}
+.price-popular .price-tag{background:linear-gradient(110deg,#06a98d,#068472);color:#fff}
+.price-card h3{font-size:22px}
+.price-card .btn{width:100%}
+.price-amount{background:linear-gradient(120deg,#102b47,#0a7a6c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-amount small{-webkit-text-fill-color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.price-card{transition:none}}
