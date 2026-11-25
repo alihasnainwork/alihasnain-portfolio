@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Site Admin</title>
+<style>
+:root{--ink:#102b47;--mut:#667b88;--line:#dce9e7;--g:#0b8f7a;--bg:#f5f9f8}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--ink);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header b{font-size:18px}
+main{max-width:860px;margin:0 auto;padding:20px 16px 80px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px}
+h2{margin:0 0 4px;font-size:1.15rem}p.h{margin:0 0 14px;color:var(--mut);font-size:14px}
+label{display:block;font-weight:650;font-size:14px;margin:12px 0 4px}
+input,textarea,select{width:100%;padding:11px 12px;border:1px solid #c9d9d6;border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+textarea{min-height:420px;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}@media(max-width:620px){.row{grid-template-columns:1fr}}
+button{background:var(--g);color:#fff;border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:44px}
+button.s{background:#fff;color:var(--ink);border:1px solid #c9d9d6}button:disabled{opacity:.5;cursor:wait}
+.tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}.tabs button{background:#fff;color:var(--ink);border:1px solid #c9d9d6}.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+#msg{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:92vw;padding:12px 18px;border-radius:12px;color:#fff;font-weight:600;display:none;z-index:9}
+#msg.ok{background:#0b7a4b;display:block}#msg.err{background:#b3261e;display:block}
+.hide{display:none}small{color:var(--mut)}hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+</style></head><body>
+<header><b>Site Admin · alihasnainvaservices.site</b><span><button class="s" id="logout" type="button">Log out</button></span></header>
+<main>
+<section class="card" id="login">
+<h2>Connect to GitHub</h2>
+<p class="h">One-time setup. Your token is saved only in this browser, never on the website.</p>
+<label for="tok">GitHub access token</label><input id="tok" type="password" autocomplete="off" placeholder="github_pat_...">
+<div class="row"><div><label for="repo">Repository</label><input id="repo" value="alihasnainwork/alihasnain-portfolio"></div><div><label for="br">Branch</label><input id="br" value="main"></div></div>
+<p style="margin-top:14px"><button id="connect" type="button">Connect</button></p>
+<hr><small><b>Token kaise banayen:</b> GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Repository access: <i>Only select repositories</i> → alihasnain-portfolio. Permissions → Repository permissions → <b>Contents: Read and write</b>. Expiry jitni lamba chaho. Token kisi ko share mat karna.</small>
+</section>
+
+<div id="app" class="hide">
+<div class="tabs"><button class="on" data-tab="quick" type="button">Prices &amp; Contact</button><button data-tab="files" type="button">Edit any page</button></div>
+
+<section id="quick">
+<div class="card"><h2>Free sample</h2><p class="h">Sab pages par "100 records" ki jagah ye number aa jayega.</p>
+<label for="f-sample">Free sample records</label><input id="f-sample" data-k="sample"></div>
+
+<div class="card"><h2>Pay per match card</h2>
+<div class="row"><div><label>Main price (card)</label><input data-k="pm_price"></div><div><label>Line under price</label><input data-k="pm_sub"></div></div>
+<div class="row"><div><label>Rate up to 500 (FAQ text)</label><input data-k="pm_price_num"></div><div><label>Rate above 500 (FAQ text)</label><input data-k="pm_price2_num"></div></div>
+<label>Minimum order</label><input data-k="minimum"></div>
+
+<div class="card"><h2>Monthly VA card</h2>
+<div class="row"><div><label>Price</label><input data-k="va_price"></div><div><label>Line under price (home page)</label><input data-k="va_sub"></div></div>
+<label>Line under price (pricing page)</label><input data-k="va_sub_long"></div>
+
+<div class="card"><h2>Per-match table (pricing page)</h2>
+<div class="row"><div><label>Row 1 rate</label><input data-k="t1_rate"></div><div><label>Row 1 example</label><input data-k="t1_ex"></div>
+<div><label>Row 2 rate</label><input data-k="t2_rate"></div><div><label>Row 2 example</label><input data-k="t2_ex"></div>
+<div><label>Row 3 rate</label><input data-k="t3_rate"></div><div><label>Row 3 note</label><input data-k="t3_ex"></div></div></div>
+
+<div class="card"><h2>Contact</h2>
+<div class="row"><div><label>Email</label><input data-k="email"></div><div><label>WhatsApp number (digits only, with country code)</label><input data-k="whatsapp"></div></div></div>
+
+<button id="save" type="button">Save &amp; publish</button> <small>Live hone mein ~1 minute lagta hai, phir hard refresh karo.</small>
+<p><small>Note: Google/WhatsApp preview wali meta descriptions aur OG image yahan se nahi badalti — wo "Edit any page" se badlo.</small></p>
+</section>
+
+<section id="files" class="hide"><div class="card"><h2>Edit any page</h2><p class="h">Kisi bhi page ka text seedha badlo. HTML tags (&lt; &gt;) mat chhedna, sirf unke beech ka text badlo. Save se pehle ek baar check kar lo — galti hui to live site bhi toot sakti hai (GitHub history se wapis ja sakte hain).</p>
+<label for="file">Page</label><select id="file"></select>
+<p style="margin:12px 0"><button class="s" id="loadf" type="button">Load</button></p>
+<textarea id="code" spellcheck="false" placeholder="Page select karke Load dabao"></textarea>
+<p style="margin-top:12px"><button id="savef" type="button" disabled>Save &amp; publish this page</button></p></div></section>
+</div>
+</main><div id="msg" role="status"></div>
+<script>
+(function(){
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var FILES=["index.html","pricing.html","services/skip-tracing.html","services/real-estate-va.html","services/lead-generation.html","services/data-entry.html","services/crm-management.html","services/pdf-conversion.html","services/property-lead-research.html","services/virtual-assistant.html","services/web-market-research.html","privacy.html","404.html"];
+var S={tok:"",repo:"alihasnainwork/alihasnain-portfolio",br:"main"},cSha=null,fSha=null,cur=null;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function msg(t,ok){var m=$("#msg");m.textContent=t;m.className=ok?"ok":"err";clearTimeout(msg.t);msg.t=setTimeout(function(){m.className=""},ok?3500:7000)}
+function b64e(s){var b=new TextEncoder().encode(s),r="";b.forEach(function(x){r+=String.fromCharCode(x)});return btoa(r)}
+function b64d(s){var r=atob(s.replace(/\s/g,"")),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return new TextDecoder().decode(a)}
+function api(path,opt){opt=opt||{};opt.headers=Object.assign({Authorization:"Bearer "+S.tok,Accept:"application/vnd.github+json"},opt.headers||{});
+ return fetch("https://api.github.com/repos/"+S.repo+"/contents/"+path+(opt.method==="PUT"?"":"?ref="+encodeURIComponent(S.br)),opt).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(r.status===401?"Token galat ya expire ho gaya":r.status===404?"Repo/file nahi mila ya token ko access nahi":r.status===409||r.status===422?"File kisi aur ne badal di — page reload karke dobara try karo":(j.message||"Error "+r.status));return j})})}
+function put(path,text,sha,note){return api(path,{method:"PUT",body:JSON.stringify({message:note,content:b64e(text),sha:sha,branch:S.br})})}
+function busy(b,on){b.disabled=on}
+function loadContent(){return api("content.json").then(function(j){cSha=j.sha;var c=JSON.parse(b64d(j.content));$$("[data-k]").forEach(function(i){i.value=c[i.dataset.k]||""});window._c=c})}
+function enter(){$("#login").classList.add("hide");$("#app").classList.remove("hide");
+ $("#file").innerHTML=FILES.map(function(f){return"<option>"+f+"</option>"}).join("");
+ loadContent().catch(function(e){msg(e.message,false);leave()})}
+function leave(){$("#app").classList.add("hide");$("#login").classList.remove("hide")}
+$("#connect").onclick=function(){S.tok=$("#tok").value.trim();S.repo=$("#repo").value.trim();S.br=$("#br").value.trim()||"main";if(!S.tok)return msg("Token daalo",false);
+ var b=this;busy(b,true);api("content.json").then(function(){set("adm.tok",S.tok);set("adm.repo",S.repo);set("adm.br",S.br);enter()}).catch(function(e){msg(e.message,false)}).then(function(){busy(b,false)})};
+$("#logout").onclick=function(){try{localStorage.removeItem("adm.tok")}catch(e){}S.tok="";$("#tok").value="";leave()};
+$$(".tabs button").forEach(function(b){b.onclick=function(){$$(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});$("#quick").classList.toggle("hide",b.dataset.tab!=="quick");$("#files").classList.toggle("hide",b.dataset.tab!=="files")}});
+$("#save").onclick=function(){var b=this,c=Object.assign({},window._c||{});$$("[data-k]").forEach(function(i){c[i.dataset.k]=i.value.trim()});
+ if(!/^\d+$/.test(c.sample||""))return msg("Free sample sirf number hona chahiye",false);
+ busy(b,true);put("content.json",JSON.stringify(c,null,2)+"\n",cSha,"Admin: update prices/contact").then(function(j){cSha=j.content.sha;window._c=c;msg("Saved. ~1 minute mein live ho jayega.",true)}).catch(function(e){msg(e.message,false)}).then(function(){busy(b,false)})};
+$("#loadf").onclick=function(){var b=this,f=$("#file").value;busy(b,true);api(f).then(function(j){cur=f;fSha=j.sha;$("#code").value=b64d(j.content);$("#savef").disabled=false;msg("Loaded "+f,true)}).catch(function(e){msg(e.message,false)}).then(function(){busy(b,false)})};
+$("#savef").onclick=function(){var b=this;if(!cur)return;if(!/<\/html>\s*$/i.test($("#code").value))return msg("Page ka end (</html>) missing hai — kuch delete ho gaya lagta hai",false);
+ if(!confirm("Save and publish "+cur+"?"))return;busy(b,true);put(cur,$("#code").value,fSha,"Admin: edit "+cur).then(function(j){fSha=j.content.sha;msg("Saved. ~1 minute mein live.",true)}).catch(function(e){msg(e.message,false)}).then(function(){busy(b,false)})};
+var t=get("adm.tok");if(t){S.tok=t;S.repo=get("adm.repo")||S.repo;S.br=get("adm.br")||S.br;$("#repo").value=S.repo;$("#br").value=S.br;enter()}
+})();
+</script></body></html>

@@ -1,0 +1,19 @@
+{
+  "sample": "100",
+  "pm_price": "$0.50",
+  "pm_sub": "$0.40 from 501 records · larger projects quoted",
+  "pm_price_num": "$0.50",
+  "pm_price2_num": "$0.40",
+  "va_price": "from $650",
+  "va_sub": "20 hrs/week · full-time from $1,150",
+  "va_sub_long": "20 hrs/week · full-time (40 hrs) from $1,150",
+  "minimum": "$25",
+  "t1_rate": "$0.50",
+  "t1_ex": "200 records, 150 matched = $75",
+  "t2_rate": "$0.40",
+  "t2_ex": "1,000 records, 750 matched = $300",
+  "t3_rate": "Custom quote",
+  "t3_ex": "Rate and turnaround agreed before the batch starts",
+  "email": "ali@alihasnainvaservices.site",
+  "whatsapp": "923263390990"
+}

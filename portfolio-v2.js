@@ -290,3 +290,24 @@
     });
   }
 })();
+
+/* Editable content: values from /content.json (managed in /admin/) replace the default text */
+(function(){
+  fetch("/content.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null}).then(function(c){
+    if(!c)return;
+    document.querySelectorAll("[data-c]").forEach(function(el){
+      var v=c[el.getAttribute("data-c")];
+      if(typeof v==="string"&&v!=="")el.textContent=v;
+    });
+    var wa=String(c.whatsapp||"").replace(/\D/g,"");
+    if(wa)document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
+      a.href=a.href.replace(/wa\.me\/\d+/,"wa.me/"+wa).replace(/\b\d+(-|%20)record/,(c.sample||"100")+"$1record");
+      if(/^[+\d\s]+$/.test(a.textContent.trim()))a.textContent=a.textContent.replace(/\d[\d\s]*\d/,wa);
+    });
+    if(c.email)document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+      var old=a.getAttribute("href").slice(7).split("?")[0];
+      a.setAttribute("href",a.getAttribute("href").replace(old,c.email));
+      if(a.textContent.indexOf(old)>-1)a.textContent=a.textContent.replace(old,c.email);
+    });
+  }).catch(function(){});
+})();
