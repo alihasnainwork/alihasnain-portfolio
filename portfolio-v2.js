@@ -210,7 +210,7 @@
         setState("Final check…", false);
         await animateMeter(rec.score);
         setStep(6);
-        setState("Verified", true);
+        setState("Matched", true);
         processed++;
         scoreSum += rec.score;
         counters();
